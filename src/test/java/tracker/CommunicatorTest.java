@@ -28,7 +28,6 @@ public class CommunicatorTest {
         Communicator comm1 = new Communicator(12001);
         Communicator comm2 = new Communicator(12002);
 
-
         comm1.send("Hello", InetAddress.getLocalHost(), comm2.getLocalPort());
         DatagramPacket packet = comm2.getMessage();
         assertNotNull(packet);
