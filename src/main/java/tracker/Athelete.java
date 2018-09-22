@@ -1,16 +1,34 @@
 package tracker;
 
-// A client has
-// Status of a athelete : registered, started, on-course, dropped, completed
+// A client has pool of players to observe
+enum Status {
+    REGISTERED, STARTED, ONCOURSE, FINISHED
+}
+
+enum SEX {
+    M, F
+}
+
 public class Athelete {
     private int bibNumber;
     private double distanceCovered;
     private double time;
+    private Status status;
+    private int age;
+    private String LastName;
+    private String FirstName;
+    private SEX sex;
 
     // You set the bibNumber when you get the simulator data and also set the status
-    public Athelete(int bibNumber) {
+    public Athelete(Status status, int bibNumber, int time, String FirstName, String LastName, SEX sex, int Age) {
         this.bibNumber = bibNumber;
-//        this.status =
+        this.status = status;
+        this.time = time;
+        this.age = age;
+        this.sex = sex;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        System.out.println("Player registered : " + this.FirstName + " " + this.LastName);
     }
 
     // Get time passed for athelete

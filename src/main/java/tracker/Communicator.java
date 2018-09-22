@@ -1,5 +1,7 @@
 package tracker;
 
+import sun.plugin2.message.Message;
+
 import java.awt.*;
 import java.net.DatagramSocket;
 import java.net.*;
@@ -10,7 +12,7 @@ public class Communicator implements Runnable {
 
     private DatagramSocket datagramSocket;
     private boolean _keepGoing;
-    private IMessageProcessor _processor;
+    private MessageProcessor _processor;
 
     /**
      * Constructor, which opens an UDP socket on any available port.
@@ -37,12 +39,12 @@ public class Communicator implements Runnable {
     /**
      * @return                  Get the processor that Communicator is using
      */
-    public IMessageProcessor getProcessor() { return _processor; }
+    public MessageProcessor getProcessor() { return _processor; }
 
     /**
      * @param processor         Set the Communicator's processor
      */
-    public void setProcessor(IMessageProcessor processor) { _processor = processor; }
+    public void setProcessor(MessageProcessor processor) { _processor = processor; }
 
     /**
      * Get the local port to which the Communicator's socket is bound

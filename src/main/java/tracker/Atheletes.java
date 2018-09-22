@@ -2,8 +2,7 @@ package tracker;
 
 // Maybe you need to extend observables here
 public class Atheletes {
-//    private Athelete[] listOfAthelets = new Athelete();
-
+    private Athelete[] listOfAthelets;
     public Atheletes() {
 
     }

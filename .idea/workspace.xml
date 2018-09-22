@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0471ae6-4661-4b49-b8e9-9d64f77737dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/DummyMessageProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Client.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/Client.log.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/DummyMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Client.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,29 +87,30 @@
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="java" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2439" />
+          <entry key="java" value="3484" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2439" />
+          <entry key="JAVA" value="3484" />
           <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
@@ -119,10 +119,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="476">
+              <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#207#208#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Atheletes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,33 +187,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="295">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -489,11 +524,12 @@
         <option value="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/DummyMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/tracker.java" />
       </list>
     </option>
   </component>
@@ -515,77 +551,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tracker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS5700-HW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537597006394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537638631904" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -709,6 +720,7 @@
       <workItem from="1537576578526" duration="2222000" />
       <workItem from="1537580802735" duration="4480000" />
       <workItem from="1537596574342" duration="616000" />
+      <workItem from="1537634414778" duration="4168000" />
     </task>
     <task id="LOCAL-00001" summary="added classes and their methods">
       <created>1537504353584</created>
@@ -753,12 +765,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15437000" />
+    <option name="totallyTimeSpent" value="19605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14372164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20574887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -767,7 +780,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37908497" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37908497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -803,31 +816,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/TestCommunicator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Atheletes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -835,13 +823,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -856,22 +837,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="171" column="9" lean-forward="true" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        <state relative-caret-position="221">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Atheletes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#596#597#0" expanded="true" />
           </folding>
         </state>
       </provider>
