@@ -15,7 +15,7 @@ public class CommunicatorTest {
         Communicator communicator = new Communicator();
         assertTrue(communicator.getLocalPort()>0);
 
-        DummyMessageProcessor processor = new DummyMessageProcessor("test");
+        MessageProcessor processor = new MessageProcessor("test");
         communicator.setProcessor(processor);
         assertSame(processor, communicator.getProcessor());
 
@@ -78,12 +78,12 @@ public class CommunicatorTest {
     public void testStartAndStop() throws Exception {
 
         Communicator comm1 = new Communicator();
-        DummyMessageProcessor processor1 = new DummyMessageProcessor("A");
+        MessageProcessor processor1 = new MessageProcessor("A");
         comm1.setProcessor(processor1);
         comm1.start();
 
         Communicator comm2 = new Communicator();
-        DummyMessageProcessor processor2 = new DummyMessageProcessor("B");
+        MessageProcessor processor2 = new MessageProcessor("B");
         comm2.setProcessor(processor2);
         comm2.start();
 

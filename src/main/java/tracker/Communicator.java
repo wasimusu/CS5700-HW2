@@ -1,5 +1,6 @@
 package tracker;
 
+import java.awt.*;
 import java.net.DatagramSocket;
 import java.net.*;
 
@@ -156,9 +157,11 @@ public class Communicator implements Runnable {
             DatagramPacket packet = null;
             try { packet = getMessage(); }
             catch (Exception e) { /* ignore */ }
+
             if (packet == null) continue;
 
             String message = new String( packet.getData(), 0, packet.getLength(), UTF_16BE);
+            System.out.println(message);
             InetAddress senderAddress = packet.getAddress();
             int senderPort = packet.getPort();
 

@@ -2,14 +2,15 @@ package tracker;
 
 import java.net.InetAddress;
 
-public class DummyMessageProcessor implements IMessageProcessor {
+public class MessageProcessor implements IMessageProcessor {
 
     private String name;
     private int receiveCount;
 
-    public DummyMessageProcessor(String name) {
+    public MessageProcessor(String name) {
         this.name = name;
     }
+    public void setName(String name){this.name= name;}
 
     @Override
     public void process(String message, InetAddress address, int port) {
