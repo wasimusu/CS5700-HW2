@@ -6,6 +6,7 @@ package tracker;
 import java.lang.reflect.Array;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.Observer;
 
 import static java.nio.charset.StandardCharsets.UTF_16BE;
@@ -16,6 +17,7 @@ import static java.nio.charset.StandardCharsets.UTF_16BE;
 public class Client {
     private int portAddress;
     private static int count = 0;
+    private ArrayList<Athelete> myAtheletes;
 
     // Just become a client and you have 0 to many atheletes
     public Client() {
@@ -26,9 +28,24 @@ public class Client {
     // And you get a signal that status of atheletes has changed
     // And call for status updates
     public void statusChange() {
+        // how do I keep listening to the tracker
     }
 
     public void update() {
+        for (Athelete athelete : myAtheletes) {
+            // get updated status
+            // maybe just print it
+        }
+    }
+
+    public void addAthelete(Athelete a) {
+        myAtheletes.add(a);
+        a.subscribe(this);
+    }
+
+    public void removeAthelete(Athelete a) {
+        myAtheletes.remove(a);
+        a.unsubscribe(this);
     }
 
     // Register with the tracker

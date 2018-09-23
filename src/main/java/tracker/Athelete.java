@@ -38,21 +38,17 @@ public class Athelete {
     }
 
     // You set the bibNumber when you get the simulator data and also set the status
-    public Athelete(Status status, int bibNumber, int time) {
+    public Athelete(String status, int bibNumber, int time) {
         this.bibNumber = bibNumber;
-        this.status = status;
+        this.status = Status.valueOf(status);
         this.time = time;
-        this.age = age;
-        this.sex = sex;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        System.out.println("Player registered : " + this.FirstName + " " + this.LastName);
+        System.out.println("Player registered : " + this.bibNumber + " " + this.status + "\t" + this.time);
     }
 
     // Update the athelete's information as you get data from race
-    public void updateRaceInfo(Status status, int time, float distanceCovered) {
+    public void updateStatus(String status, int time, float distanceCovered) {
         this.distanceCovered = distanceCovered;
-        this.status = status;
+        this.status = Status.valueOf(status);
         this.time = time;
     }
 

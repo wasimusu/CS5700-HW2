@@ -27,11 +27,21 @@ public class MessageProcessor implements IMessageProcessor {
             System.out.println(String.format("%s received: %s from %s:%d", name, message, address.toString(), port));
             String[] messages = message.split(",", 0);
             if (messages[0] == "Registered") {
-
+                tracker t1 = new tracker();
+                t1.registerAthelete(messages);
                 // Register a new player
             } else if (messages[0] == "OnCourse") {
+                tracker t1 = new tracker();
+                t1.updateAthelete(messages);
+                //Update the status and inform clients
+            } else if (messages[0] == "Started") {
+                tracker t1 = new tracker();
+                t1.registerAthelete(messages);
                 //Update the status and inform clients
             } else if (messages[0] == "Finished") {
+                tracker t1 = new tracker();
+                t1.registerAthelete(messages);
+
                 //Update the status and inform clients
             } else {
                 // Garbage message
