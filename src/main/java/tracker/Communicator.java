@@ -17,10 +17,9 @@ public class Communicator implements Runnable {
     /**
      * Constructor, which opens an UDP socket on any available port.
      *
-     * @throws SocketException  Exception thrown if there is a problem creating the UDP socket
+     * @throws SocketException Exception thrown if there is a problem creating the UDP socket
      */
-    public Communicator() throws SocketException
-    {
+    public Communicator() throws SocketException {
         datagramSocket = new DatagramSocket();
     }
 
@@ -28,48 +27,53 @@ public class Communicator implements Runnable {
      * Constructor, which opens an UDP socket on a given port.  If that port is being used by another process
      * on the computer, this constructor will throw an exception.
      *
-     * @param localPort         Local port to which the UDP socket should be bound
-     * @throws SocketException  Exception thrown if there is a problem creating the UDP socket
+     * @param localPort Local port to which the UDP socket should be bound
+     * @throws SocketException Exception thrown if there is a problem creating the UDP socket
      */
-    public Communicator(int localPort) throws java.net.SocketException
-    {
+
+    public Communicator(int localPort) throws java.net.SocketException {
         datagramSocket = new DatagramSocket(localPort);
     }
 
     /**
-     * @return                  Get the processor that Communicator is using
+     * @return Get the processor that Communicator is using
      */
-    public MessageProcessor getProcessor() { return _processor; }
+    public MessageProcessor getProcessor() {
+        return _processor;
+    }
 
     /**
-     * @param processor         Set the Communicator's processor
+     * @param processor Set the Communicator's processor
      */
-    public void setProcessor(MessageProcessor processor) { _processor = processor; }
+    public void setProcessor(MessageProcessor processor) {
+        _processor = processor;
+    }
 
     /**
      * Get the local port to which the Communicator's socket is bound
-     * @return                  Returns the port to which the Commuicator's UDP socket is bound. It will return
-     *                          0 if there no UDP socket
+     *
+     * @return Returns the port to which the Commuicator's UDP socket is bound. It will return
+     * 0 if there no UDP socket
      */
     public int getLocalPort() {
-        return (datagramSocket!=null) ? datagramSocket.getLocalPort() : 0;
+        return (datagramSocket != null) ? datagramSocket.getLocalPort() : 0;
     }
 
     /**
      * Send a message to a target process
      *
-     * @param message           Message to send
-     * @param targetAddress     IPv4 address of end point where the message needs to be sent
-     * @param targetPort        Port of end point where the message needs to be sent
-     * @throws Exception        Exception throw is the parameters are invalid or there is socket error
+     * @param message       Message to send
+     * @param targetAddress IPv4 address of end point where the message needs to be sent
+     * @param targetPort    Port of end point where the message needs to be sent
+     * @throws Exception Exception throw is the parameters are invalid or there is socket error
      */
-    public void send(String message, InetAddress targetAddress, int targetPort ) throws Exception {
-        if (datagramSocket==null) return;
+    public void send(String message, InetAddress targetAddress, int targetPort) throws Exception {
+        if (datagramSocket == null) return;
 
-        if (message==null)
+        if (message == null)
             throw new Exception("Cannot send an empty message");
 
-        if (targetAddress ==null)
+        if (targetAddress == null)
             throw new Exception("Invalid target address");
 
         if (targetPort <= 0)
@@ -83,8 +87,8 @@ public class Communicator implements Runnable {
     /**
      * Get a message with 100 ms
      *
-     * @return                  A datagram package, which include the received data, the senders address,
-     *                          and sender's point
+     * @return A datagram package, which include the received data, the senders address,
+     * and sender's point
      */
     public DatagramPacket getMessage() throws Exception {
         return getMessage(100);
@@ -93,26 +97,22 @@ public class Communicator implements Runnable {
     /**
      * Get a message (within the specified timeout)
      *
-     * @param timeout           Maximum number of milliseconds to wait for a timeout
-     * @return                  A datagram package, which include the received data, the senders address,
-     *                          and sender's point
+     * @param timeout Maximum number of milliseconds to wait for a timeout
+     * @return A datagram package, which include the received data, the senders address,
+     * and sender's point
      */
-    public DatagramPacket getMessage(int timeout) throws Exception
-    {
-        if (datagramSocket==null) return null;
+    public DatagramPacket getMessage(int timeout) throws Exception {
+        if (datagramSocket == null) return null;
 
         datagramSocket.setSoTimeout(timeout);
 
         byte[] receiveData = new byte[1024];
 
         DatagramPacket receivePacket = null;
-        try
-        {
+        try {
             receivePacket = new DatagramPacket(receiveData, receiveData.length);
             datagramSocket.receive(receivePacket);
-        }
-        catch (SocketTimeoutException err)
-        {
+        } catch (SocketTimeoutException err) {
             receivePacket = null;
         }
 
@@ -122,8 +122,7 @@ public class Communicator implements Runnable {
     /**
      * Start this Communicator as an active object.  This create a thread on which the Run methods is executed
      */
-    public void start()
-    {
+    public void start() {
         if (_keepGoing) return;
 
         _keepGoing = true;
@@ -143,31 +142,29 @@ public class Communicator implements Runnable {
      * Close any resources used by this communicator, namely the UDP socket.  After this method is called, the
      * Communicator cannot be used again.
      */
-    public void close()
-    {
+    public void close() {
         datagramSocket.close();
-        datagramSocket=null;
+        datagramSocket = null;
     }
 
     /**
      * Run loop for runnable
      */
-    public void run()
-    {
-        while (_keepGoing && datagramSocket!=null)
-        {
+    public void run() {
+        while (_keepGoing && datagramSocket != null) {
             DatagramPacket packet = null;
-            try { packet = getMessage(); }
-            catch (Exception e) { /* ignore */ }
+            try {
+                packet = getMessage();
+            } catch (Exception e) { /* ignore */ }
 
             if (packet == null) continue;
 
-            String message = new String( packet.getData(), 0, packet.getLength(), UTF_16BE);
+            String message = new String(packet.getData(), 0, packet.getLength(), UTF_16BE);
             System.out.println(message);
             InetAddress senderAddress = packet.getAddress();
             int senderPort = packet.getPort();
 
-            if (_processor!=null)
+            if (_processor != null)
                 _processor.process(message, senderAddress, senderPort);
         }
     }

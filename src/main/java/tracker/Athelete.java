@@ -17,24 +17,25 @@ public class Athelete {
     private int bibNumber;
     private double distanceCovered;
     private double time;
-    private int age;
     private Status status;
-    private String LastName;
-    private String FirstName;
+    private int age;
+    private String lastName;
+    private String firstName;
     private SEX sex;
 
     private ArrayList<Client> subscribers;
+    private int totalSubscriber;
 
     // You set the bibNumber when you get the simulator data and also set the status
-    public Athelete(Status status, int bibNumber, int time, String FirstName, String LastName, SEX sex, int age) {
+    public Athelete(Status status, int bibNumber, int time, String firstName, String lastName, SEX sex, int age) {
         this.bibNumber = bibNumber;
         this.status = status;
         this.time = time;
         this.age = age;
         this.sex = sex;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        System.out.println("Player registered : " + this.FirstName + " " + this.LastName);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        System.out.println("Player registered : " + this.firstName + " " + this.lastName);
     }
 
     // You set the bibNumber when you get the simulator data and also set the status
@@ -53,13 +54,15 @@ public class Athelete {
     }
 
     // Subscribe to an athelete's activity
-    public void subscribe(Client subscriber) {
-        this.subscribers.add(subscriber);
+    public void subscribe(Client client) {
+        this.subscribers.add(client);
+        totalSubscriber++;
     }
 
     // Unsubscribe from an athelete's activity
-    public void unsubscribe(Client subscriber) {
-        this.subscribers.remove(subscriber);
+    public void unsubscribe(Client client) {
+        this.subscribers.remove(client);
+        totalSubscriber--;
     }
 
     public void notifyChange() {
@@ -81,5 +84,10 @@ public class Athelete {
     // Get bib number of the athelete
     public double getBibNumber() {
         return bibNumber;
+    }
+
+    // Get the total number of subscriber of an athelete
+    public int getTotalSubscriber() {
+        return totalSubscriber;
     }
 }

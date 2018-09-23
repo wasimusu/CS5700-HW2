@@ -1,6 +1,7 @@
 package tracker;
 
 import java.net.DatagramPacket;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Observable;
@@ -50,14 +51,52 @@ public class tracker extends Observable {
         // Instanstiate an athelete object
         Athelete a = AtheleteIdMap.get(messages[1]);
         a.updateStatus(status, timeElapsed, distanceCovered);
+
         // Map is required to retrieve athelete object based on string id
         AtheleteIdMap.put(messages[1], a);
         Atheletes.add(a);
     }
 
+    // Race started -- after client subscribes to an athelete for the first time
+    // New Athelete  -- sent to every client after a new athelete registers
+    // Athelete Status --sent to the client if they are tracking the athelete when its' status change
+    public void sendRaceStarted() {
+
+    }
+
+    public void newAtheleteRegistered() {
+
+    }
+
+    public void atheleteStatusChange() {
+    }
+
     public void notifyObserver() {
 
     }
+
+    public void listenToClients() {
+        // Messages the client sends to the server
+        // Hello
+        // Subscribe to an athelete
+        // UnSubscribe from an athelete
+    }
+
+    public void sendMessageToClients(String message) throws Exception {
+        Communicator trackComm = new Communicator(12001);
+        for (Client client : Clients) {
+            trackComm.send(message, InetAddress.getLocalHost(), client.getPortAddress());
+        }
+    }
+
+    public void subscribe(Athelete athelete, Client client) {
+        athelete.subscribe(client);
+    }
+
+    public void unsubscribe(Athelete athelete, Client client) {
+        athelete.unsubscribe(client);
+    }
+
 
     public static void main(String[] args) throws Exception {
         int ServerPort = 12000;
@@ -71,5 +110,4 @@ public class tracker extends Observable {
         communicator.start();
         communicator.run();
     }
-
 }
