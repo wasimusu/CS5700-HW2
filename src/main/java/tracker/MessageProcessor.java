@@ -33,8 +33,7 @@ public class MessageProcessor implements IMessageProcessor {
                 //Update the status and inform clients
             } else if (messages[0] == "Finished") {
                 //Update the status and inform clients
-            }
-            else{
+            } else {
                 // Garbage message
             }
             receiveCount++;
