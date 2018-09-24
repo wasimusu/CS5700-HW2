@@ -53,7 +53,11 @@ public class MessageProcessor implements IMessageProcessor {
                 tracker.subscribe(messages[1], port);
 
             } else if (status.equals("Unsubscribe")) {
-                tracker.unsubscribe(messages[1], port);
+//                tracker.unsubscribe(messages[1], port);
+                return new UnsubscribeProcessor(message, address, port);
+
+            } else if (status.equals("Hello")) {
+//                return new HelloProcessor(message, address, port);
 
             } else {
                 // Garbage message
