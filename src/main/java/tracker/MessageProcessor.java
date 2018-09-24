@@ -48,7 +48,10 @@ public class MessageProcessor implements IMessageProcessor {
                 System.out.println(status);
 
             } else if (status.equals("Subscribe")) {
-                t1.subscribe();
+                t1.subscribe(messages[1], port);
+
+            } else if (status.equals("Unsubscribe")) {
+                t1.unsubscribe(messages[1], port);
             } else {
                 // Garbage message
 //                System.out.println("Garbage Message : " + message);
