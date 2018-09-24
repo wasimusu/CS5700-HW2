@@ -9,7 +9,7 @@ public class MessageProcessor implements IMessageProcessor {
     private int receiveCount;
     private static tracker t1;
 
-    public MessageProcessor(String name) {
+    public MessageProcessor(String name) throws Exception{
         this.name = name;
         t1 = new tracker();
     }

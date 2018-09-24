@@ -13,7 +13,7 @@ import java.util.Observer;
 // Observer
 public class Client {
     private static int clientCount = 0;  // no of clients instantiated so far
-    private static HashMap<Integer, Client> portAddressClientMap;
+    public static HashMap<Integer, Client> portAddressClientMap;
 
     private int portAddress;
     private ArrayList<Athelete> myAtheletes;
@@ -28,9 +28,14 @@ public class Client {
         this.dependablesCount = 0;
         communicator = new Communicator();
         portAddressClientMap.put(communicator.getLocalPort(), this);
-        communicator.send("Hello", InetAddress.getLocalHost(), 12000);
+        this.communicator.send("Hello", InetAddress.getLocalHost(), 12000);
 
         myAtheletes = new ArrayList<Athelete>();
+    }
+
+    @Override
+    public String toString() {
+        return "Client : "+clientCount+ "\tPort Address : "+portAddress;
     }
 
     public int getPortAddress() throws Exception {
@@ -38,7 +43,7 @@ public class Client {
     }
 
     // Identify the client using port address
-    public Client identifyClient(int portAddress) {
+    public static Client identifyClient(int portAddress) {
         return portAddressClientMap.get(portAddress);
     }
 

@@ -65,12 +65,14 @@ public class Athelete {
     public void subscribe(Client client) {
         this.subscribers.add(client);
         totalSubscriber++;
+        System.out.println("My client count : "+totalSubscriber);
     }
 
     // Unsubscribe from an athelete's activity
     public void unsubscribe(Client client) {
         this.subscribers.remove(client);
         totalSubscriber--;
+        System.out.println("My client count : "+totalSubscriber);
     }
 
     public void notifyChange() {
