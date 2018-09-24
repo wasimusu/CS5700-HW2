@@ -150,7 +150,7 @@ public class Communicator implements Runnable {
     /**
      * Run loop for runnable
      */
-    public void run() {
+    public void run(){
         while (_keepGoing && datagramSocket != null) {
             DatagramPacket packet = null;
             try {
@@ -164,7 +164,12 @@ public class Communicator implements Runnable {
             int senderPort = packet.getPort();
 
             if (_processor != null)
-                _processor.process(message, senderAddress, senderPort);
+                try {
+                    _processor.process(message, senderAddress, senderPort);
+                }
+                catch (Exception e){
+                    System.out.println(e);
+                }
         }
     }
 

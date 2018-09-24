@@ -18,7 +18,6 @@ import static java.nio.charset.StandardCharsets.UTF_16BE;
 // Observer
 public class Client {
     private static int clientCount = 0;  // no of clients instantiated so far
-    private static int startPortAddress = 12001;
 
     private int portAddress;
     private ArrayList<Athelete> myAtheletes;
@@ -27,8 +26,6 @@ public class Client {
 
     // Just become a client and you have 0 to many atheletes
     public Client() throws Exception {
-        this.portAddress = startPortAddress;
-        startPortAddress++;
         clientCount++;
 
         this.dependablesCount = 0;
@@ -38,10 +35,13 @@ public class Client {
         myAtheletes = new ArrayList<Athelete>();
     }
 
-
     public int getPortAddress() throws Exception {
         return this.portAddress;
     }
+
+    public Client identifyClient(int portAddress){
+        return this;
+    };
 
     // get the number of atheletes the client is watching
     public int getDependablesCount() {
@@ -50,7 +50,7 @@ public class Client {
 
     // Series of messages that are sent by client to the tracker
     public void sendSubscribe(int bibNumber) throws Exception {
-        String message = "Unsubscribe," + String.valueOf(bibNumber);
+        String message = "Subscribe," + String.valueOf(bibNumber);
         sendMessageToTracker(message);
         this.dependablesCount++;
     }

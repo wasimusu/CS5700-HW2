@@ -22,24 +22,55 @@ public class tracker extends Observable {
         Atheletes = new ArrayList<Athelete>();
     }
 
-    public void registerAthelete(String[] messages) {
+    public void registerAthelete(String[] messages) throws Exception{
         // Making sense of the message received and registering the athelete
         String status = messages[0];
-        int bibNumber = Integer.valueOf(messages[1]);
+        String bibNumber = messages[1];
         int timeElapsed = Integer.valueOf(messages[2]);
 
         // Instanstiate an athelete object
-        System.out.println(status + " : " + bibNumber + " " + timeElapsed);
-        Athelete a = new Athelete(status, bibNumber, timeElapsed);
+        System.out.println("Size of players list : "+nameAtheleteMap.size());
+        System.out.println(nameAtheleteMap);
+        Athelete a = new Athelete(status, Integer.valueOf(bibNumber), timeElapsed);
+        System.out.println(a);
 
         // Map is required to retrieve athelete object based on string id
-        nameAtheleteMap.put(messages[1], a);
+        nameAtheleteMap.put(bibNumber, a);
         Atheletes.add(a);
+
+        System.out.println("New client");
+        Client c1 = new Client();
+        c1.sendSubscribe(1);
+        System.out.println("New Client");
 
 //        String message = String.join(" ", messages);
 //        notifyObservers(message);
     }
 
+    public void registerClient(String[] messages) throws Exception{
+        // Making sense of the message received and registering the athelete
+        String status = messages[0];
+        String bibNumber = messages[1];
+        int timeElapsed = Integer.valueOf(messages[2]);
+
+        // Instanstiate an athelete object
+        System.out.println("Size of players list : "+nameAtheleteMap.size());
+        System.out.println(nameAtheleteMap);
+        Athelete a = new Athelete(status, Integer.valueOf(bibNumber), timeElapsed);
+        System.out.println(a);
+
+        // Map is required to retrieve athelete object based on string id
+        nameAtheleteMap.put(bibNumber, a);
+        Atheletes.add(a);
+
+        System.out.println("New client");
+        Client c1 = new Client();
+        c1.sendSubscribe(1);
+        System.out.println("New Client");
+
+//        String message = String.join(" ", messages);
+//        notifyObservers(message);
+    }
 
     public void generalMessage(String[] messages) {
 
@@ -61,14 +92,13 @@ public class tracker extends Observable {
         float distanceCovered = Float.valueOf(messages[3]);
 
         // Instanstiate an athelete object
+        System.out.println(nameAtheleteMap);
         System.out.print(bibNumber);
         Athelete a = nameAtheleteMap.get(bibNumber);
         if (a != null) {
-            a.updateStatus(status, timeElapsed, distanceCovered);
-
-            // Map is required to retrieve athelete object based on string id
-            nameAtheleteMap.put(messages[1], a);
-            Atheletes.add(a);
+//            a.updateStatus(status, timeElapsed, distanceCovered);
+//            // Map is required to retrieve athelete object based on string id
+//            nameAtheleteMap.put(messages[1], a);
 
             // Notify all the clients of status change
             String message = String.join(" ", messages);
@@ -90,17 +120,9 @@ public class tracker extends Observable {
     // New Athelete  -- sent to every client after a new athelete registers
     // Athelete Status --sent to the client if they are tracking the athelete when its' status change
 
-    public void listenToClients() {
-        // Messages the client sends to the server
-        // Hello
-        // Subscribe to an athelete
-        // UnSubscribe from an athelete
-        // Increase the number of observes
-    }
-
     // Subscribe a client to an athelete and if its' clients firs, send race started message back
-    public void subscribe(Athelete athelete, Client client) throws Exception {
-        athelete.subscribe(client);
+    public void subscribe(String bibNumber, String clientPortAddress) throws Exception {
+        this.nameAtheleteMap.get(bibNumber).subscribe();
 
         // Convey to the client that the race started
         if (client.getDependablesCount() == 1) {

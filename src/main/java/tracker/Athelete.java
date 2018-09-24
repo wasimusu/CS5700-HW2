@@ -41,7 +41,11 @@ public class Athelete {
         this.lastName = lastName;
         System.out.println("Player registered : " + this.firstName + " " + this.lastName);
         subscribers = new ArrayList<Client>();
+    }
 
+    // String representation of an athelete
+    public String toString() {
+        return ("Player : " + this.bibNumber+ " " + this.time + " : " + statuses);
     }
 
     // You set the bibNumber when you get the simulator data and also set the status
@@ -117,9 +121,10 @@ public class Athelete {
         HashMap<String, Athelete> mapa = new HashMap<String, Athelete>();
         mapa.put("a", a);
         mapa.put("b", b);
-        Athelete c = mapa.get("a");
-        Athelete d = mapa.get("b");
-        assert c.equals(a);
-        assert d.equals(b);
+//        Athelete c = mapa.get("a");
+//        Athelete d = mapa.get("b");
+//        assert c.equals(a);
+//        assert d.equals(b);
+        System.out.println(mapa);
     }
 }

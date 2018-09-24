@@ -7,11 +7,12 @@
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Atheletes.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/IMessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/IMessageProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" afterDir="false" />
     </list>
@@ -88,6 +89,7 @@
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.53" value="1" />
@@ -97,30 +99,30 @@
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="26" />
+          <entry key="java" value="30" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="26" />
+          <entry key="JAVA" value="30" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10326" />
+          <entry key="java" value="11045" />
           <entry key="txt" value="239" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10326" />
+          <entry key="JAVA" value="11045" />
           <entry key="PLAIN_TEXT" value="239" />
         </counts>
       </usages-collector>
@@ -131,15 +133,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="139">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#1956#1957#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="50" selection-start-line="50" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="80" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -147,13 +177,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="289">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2503#2504#0" expanded="true" />
-                <element signature="e#2541#2542#0" expanded="true" />
-                <element signature="e#3416#3434#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,7 +192,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding>
                 <element signature="e#82#83#0" expanded="true" />
                 <element signature="e#147#148#0" expanded="true" />
@@ -173,24 +202,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3842#3843#0" expanded="true" />
-                <element signature="e#3886#3887#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+            <state relative-caret-position="221">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,6 +238,8 @@
       <find>Map</find>
       <find>AtheleteIdMap</find>
       <find>ArrayList</find>
+      <find>status</find>
+      <find>toString</find>
     </findStrings>
     <replaceStrings>
       <replace>Clients</replace>
@@ -534,17 +551,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/tracker/TestCommunicator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/DummyMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/ClientTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/tracker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
       </list>
     </option>
   </component>
@@ -641,7 +658,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537776531269" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537812953791" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -789,6 +806,7 @@
       <workItem from="1537681397850" duration="1184000" />
       <workItem from="1537683267182" duration="4641000" />
       <workItem from="1537723846184" duration="16310000" />
+      <workItem from="1537809758762" duration="3156000" />
     </task>
     <task id="LOCAL-00001" summary="added classes and their methods">
       <created>1537504353584</created>
@@ -861,22 +879,22 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47199000" />
+    <option name="totallyTimeSpent" value="50355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.21785174" />
+      <window_info id="Structure" order="1" sideWeight="0.50121653" side_tool="true" visible="true" weight="0.21785174" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37908497" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24836601" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -924,13 +942,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/DatagramPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3094">
@@ -1001,45 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding>
-            <element signature="e#82#83#0" expanded="true" />
-            <element signature="e#147#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1517#1518#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4net.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1047,37 +1019,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        <state relative-caret-position="289">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="80" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="e#82#83#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2503#2504#0" expanded="true" />
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#3416#3434#0" expanded="true" />
+            <element signature="e#1956#1957#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="68">
+          <caret line="50" selection-start-line="50" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3842#3843#0" expanded="true" />
-            <element signature="e#3886#3887#0" expanded="true" />
           </folding>
         </state>
       </provider>
