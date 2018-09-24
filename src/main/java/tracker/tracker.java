@@ -9,17 +9,14 @@ import java.util.Observable;
 // tracker has list of clients
 // gets the information
 public class tracker extends Observable {
-    private static ArrayList<Client> Clients;
-    private static ArrayList<Athelete> Atheletes;
-    private static HashMap<String, Athelete> nameAtheleteMap;
+    private static ArrayList<Client> Clients = new ArrayList<Client>();
+    private static ArrayList<Athelete> Atheletes = new ArrayList<Athelete>();
+    private static HashMap<String, Athelete> nameAtheleteMap = new HashMap<String, Athelete>();
     private static String raceStartedMessage;
     int ServerPort = 12000;
     private static Communicator serverComm;
 
     public tracker() throws Exception {
-        nameAtheleteMap = new HashMap<String, Athelete>();
-        Clients = new ArrayList<Client>();
-        Atheletes = new ArrayList<Athelete>();
         serverComm = new Communicator(ServerPort);
     }
 
@@ -42,9 +39,6 @@ public class tracker extends Observable {
         Client c1 = new Client();
         c1.sendSubscribe(1);
         System.out.println(c1);
-        Client c2 = new Client();
-        c1.sendSubscribe(1);
-        System.out.println(c2);
         System.out.println(Client.portAddressClientMap);
 //        String message = String.join(" ", messages);
 //        notifyObservers(message);
@@ -65,7 +59,6 @@ public class tracker extends Observable {
 
 
     public void updateAthelete(String[] messages) throws Exception {
-        System.out.println("Updating athelete status");
         String status = messages[0];
         String bibNumber = messages[1];
         int timeElapsed = Integer.valueOf(messages[2]);
@@ -74,9 +67,9 @@ public class tracker extends Observable {
         Athelete a = nameAtheleteMap.get(bibNumber);
         if (a != null) {
             a.updateStatus(status, timeElapsed, distanceCovered);
-//            // Map is required to retrieve athelete object based on string id
+            // Map is required to retrieve athelete object based on string id
             nameAtheleteMap.put(bibNumber, a);
-            System.out.println(a);
+            System.out.println("Updated : " + a);
 
             // Notify all the clients of status change
             String message = String.join(" ", messages);
@@ -87,9 +80,10 @@ public class tracker extends Observable {
     }
 
     public void notifyObserverss(String message) throws Exception {
-        System.out.println("Notifying " + message);
+        System.out.println("Notifying : ----------------------------");
         for (Client client : Clients) {
             serverComm.send(message, InetAddress.getLocalHost(), client.getPortAddress());
+            System.out.println("Notifying : "+client);
         }
     }
 

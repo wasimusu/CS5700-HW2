@@ -6,14 +6,13 @@ package tracker;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Observer;
 
 // Each client has a port number on which to communicate that
 // status changed for one of its atheletes
 // Observer
 public class Client {
     private static int clientCount = 0;  // no of clients instantiated so far
-    public static HashMap<Integer, Client> portAddressClientMap;
+    public static HashMap<Integer, Client> portAddressClientMap = new HashMap<Integer, Client>();
 
     private int portAddress;
     private ArrayList<Athelete> myAtheletes;
@@ -23,11 +22,14 @@ public class Client {
     // Just become a client and you have 0 to many atheletes
     public Client() throws Exception {
         clientCount++;
-        portAddressClientMap = new HashMap<Integer, Client>();
 
-        this.dependablesCount = 0;
+        this.dependablesCount = 0; // no of atheletes it is watching
         communicator = new Communicator();
-        portAddressClientMap.put(communicator.getLocalPort(), this);
+
+        // Key value pairs for the hashmap
+        portAddress = communicator.getLocalPort();
+        portAddressClientMap.put(portAddress, this);
+        // Send hello to the tracker
         this.communicator.send("Hello", InetAddress.getLocalHost(), 12000);
 
         myAtheletes = new ArrayList<Athelete>();
@@ -35,7 +37,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client : "+clientCount+ "\tPort Address : "+portAddress;
+        return "Client : " + portAddressClientMap.size() + "\tPort Address : " + portAddress;
     }
 
     public int getPortAddress() throws Exception {
@@ -71,7 +73,7 @@ public class Client {
     }
 
     public void sendMessageToTracker(String message) throws Exception {
-        communicator = new Communicator(this.portAddress);
+//        communicator = new Communicator(this.portAddress);
         communicator.send(message, InetAddress.getLocalHost(), 12000);
     }
 
@@ -81,5 +83,8 @@ public class Client {
             // maybe just print it
             // Display the updated status
         }
+    }
+
+    public static void main(String[] args) throws Exception {
     }
 }

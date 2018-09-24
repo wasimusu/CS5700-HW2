@@ -1,17 +1,18 @@
 package tracker;
 
 import java.net.InetAddress;
-import java.net.SocketException;
+import java.util.HashMap;
 
 public class MessageProcessor implements IMessageProcessor {
 
     private String name;
     private int receiveCount;
-    private static tracker t1;
+    private static tracker tracker;
+    private static HashMap<String, IMessageProcessor> methodMap = new HashMap<String, IMessageProcessor>();
 
-    public MessageProcessor(String name) throws Exception{
+    public MessageProcessor(String name) throws Exception {
         this.name = name;
-        t1 = new tracker();
+        tracker = new tracker();
     }
 
     public void setName(String name) {
@@ -20,6 +21,8 @@ public class MessageProcessor implements IMessageProcessor {
 
     @Override
     public void process(String message, InetAddress address, int port) throws Exception {
+        // Enlist the methods
+
         if (message == null) {
             System.out.println("Null string");
             return;
@@ -34,24 +37,24 @@ public class MessageProcessor implements IMessageProcessor {
 
             if (status.equals("Registered")) {
                 // Sends a different message to all clients when the race starts
-                t1.registerAthelete(messages);
+                tracker.registerAthelete(messages);
 
             } else if (status.equals("OnCourse")) {
-                t1.updateAthelete(messages);
+                tracker.updateAthelete(messages);
                 //Update the status and inform clients
                 System.out.println(status);
 
-
             } else if (status.equals("Started") || status.equals("Finished") ||
                     status.equals("DidNotStart") || status.equals("DidNotFinish")) {
-                t1.generalMessage(messages);
+                tracker.generalMessage(messages);
                 System.out.println(status);
 
             } else if (status.equals("Subscribe")) {
-                t1.subscribe(messages[1], port);
+                tracker.subscribe(messages[1], port);
 
             } else if (status.equals("Unsubscribe")) {
-                t1.unsubscribe(messages[1], port);
+                tracker.unsubscribe(messages[1], port);
+
             } else {
                 // Garbage message
 //                System.out.println("Garbage Message : " + message);
