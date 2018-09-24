@@ -3,6 +3,8 @@ package tracker;
 import javafx.beans.Observable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 // A client has pool of players to observe
 enum Status {
@@ -18,6 +20,7 @@ public class Athelete {
     private double distanceCovered;
     private double time;
     private Status status;
+    private String statuses;
     private int age;
     private String lastName;
     private String firstName;
@@ -25,6 +28,7 @@ public class Athelete {
 
     private ArrayList<Client> subscribers;
     private int totalSubscriber;
+    private static HashMap<String, Athelete> mapa;
 
     // You set the bibNumber when you get the simulator data and also set the status
     public Athelete(Status status, int bibNumber, int time, String firstName, String lastName, SEX sex, int age) {
@@ -36,14 +40,30 @@ public class Athelete {
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println("Player registered : " + this.firstName + " " + this.lastName);
+        subscribers = new ArrayList<Client>();
+
     }
+
+    // You set the bibNumber when you get the simulator data and also set the status
+//    public Athelete(Status status, int bibNumber, int time) {
+//        this.bibNumber = bibNumber;
+//        this.status = status;
+//        this.time = time;
+//        System.out.println(status + " : " + bibNumber + " " + time);
+//        System.out.println("Player registered : " + this.bibNumber + " " + this.status + "\t" + this.time);
+//    subscribers = new ArrayList<Client>();
+
+//    }
 
     // You set the bibNumber when you get the simulator data and also set the status
     public Athelete(String status, int bibNumber, int time) {
         this.bibNumber = bibNumber;
-        this.status = Status.valueOf(status);
+        this.statuses = status;
         this.time = time;
-        System.out.println("Player registered : " + this.bibNumber + " " + this.status + "\t" + this.time);
+        System.out.println("Player registered : " + this.bibNumber + " " + this.statuses + "\t" + this.time);
+        System.out.println(status + " : " + bibNumber + " " + time);
+//        mapa = new HashMap<String, Athelete>();
+        subscribers = new ArrayList<Client>();
     }
 
     // Update the athelete's information as you get data from race
@@ -89,5 +109,17 @@ public class Athelete {
     // Get the total number of subscriber of an athelete
     public int getTotalSubscriber() {
         return totalSubscriber;
+    }
+
+    public static void main(String[] args) {
+        Athelete a = new Athelete("Registered", 2, 90);
+        Athelete b = new Athelete("Started", 1, 20);
+        HashMap<String, Athelete> mapa = new HashMap<String, Athelete>();
+        mapa.put("a", a);
+        mapa.put("b", b);
+        Athelete c = mapa.get("a");
+        Athelete d = mapa.get("b");
+        assert c.equals(a);
+        assert d.equals(b);
     }
 }

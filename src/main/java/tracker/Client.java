@@ -34,10 +34,10 @@ public class Client {
         this.dependablesCount = 0;
         communicator = new Communicator(this.portAddress);
         communicator.send("Hello", InetAddress.getLocalHost(), 12000);
+
+        myAtheletes = new ArrayList<Athelete>();
     }
 
-    public void sendHello() throws Exception {
-    }
 
     public int getPortAddress() throws Exception {
         return this.portAddress;
@@ -48,20 +48,28 @@ public class Client {
         return this.dependablesCount;
     }
 
+    // Series of messages that are sent by client to the tracker
     public void sendSubscribe(int bibNumber) throws Exception {
         String message = "Unsubscribe," + String.valueOf(bibNumber);
-        communicator = new Communicator(this.portAddress);
-        communicator.send(message, InetAddress.getLocalHost(), 12000);
+        sendMessageToTracker(message);
         this.dependablesCount++;
     }
 
     public void sendUnsubscribe(int bibNumber) throws Exception {
         String message = "Subscribe," + String.valueOf(bibNumber);
-        communicator = new Communicator(this.portAddress);
-        communicator.send(message, InetAddress.getLocalHost(), 12000);
-        this.dependablesCount++;
+        sendMessageToTracker(message);
+        this.dependablesCount--;
     }
 
+    public void sendHello() throws Exception {
+        String message = "Hello";
+        sendMessageToTracker(message);
+    }
+
+    public void sendMessageToTracker(String message) throws Exception {
+        communicator = new Communicator(this.portAddress);
+        communicator.send(message, InetAddress.getLocalHost(), 12000);
+    }
 
     // And you get a signal that status of atheletes has changed
     // And call for status updates
@@ -73,6 +81,7 @@ public class Client {
         for (Athelete athelete : myAtheletes) {
             // get updated status
             // maybe just print it
+            // Display the updated status
         }
     }
 
@@ -85,7 +94,4 @@ public class Client {
         myAtheletes.remove(a);
         a.unsubscribe(this);
     }
-
-    // Register with the tracker
-    // Unregister with the tracker
 }

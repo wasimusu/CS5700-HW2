@@ -160,7 +160,6 @@ public class Communicator implements Runnable {
             if (packet == null) continue;
 
             String message = new String(packet.getData(), 0, packet.getLength(), UTF_16BE);
-            System.out.println(message);
             InetAddress senderAddress = packet.getAddress();
             int senderPort = packet.getPort();
 

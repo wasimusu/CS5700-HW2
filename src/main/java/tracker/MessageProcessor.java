@@ -1,6 +1,7 @@
 package tracker;
 
 import java.net.InetAddress;
+import java.net.SocketException;
 
 public class MessageProcessor implements IMessageProcessor {
 
@@ -24,27 +25,32 @@ public class MessageProcessor implements IMessageProcessor {
             System.out.println("Null address");
             return;
         } else {    // If we have a valid message
-            System.out.println(String.format("%s received: %s from %s:%d", name, message, address.toString(), port));
+//            System.out.println(String.format("%s received: %s from %s:%d", name, message, address.toString(), port));
             String[] messages = message.split(",", 0);
-            if (messages[0] == "Registered") {
+            String status = messages[0];
+            if (status.equals("Registered")) {
+                System.out.println(status);
+                // Sends a different message to all clients when the race starts
                 tracker t1 = new tracker();
                 t1.registerAthelete(messages);
-                // Register a new player
-            } else if (messages[0] == "OnCourse") {
+//                t1.updateAthelete(messages);
+
+            } else if (status.equals("OnCourse")) {
                 tracker t1 = new tracker();
                 t1.updateAthelete(messages);
                 //Update the status and inform clients
-            } else if (messages[0] == "Started") {
-                tracker t1 = new tracker();
-                t1.registerAthelete(messages);
-                //Update the status and inform clients
-            } else if (messages[0] == "Finished") {
-                tracker t1 = new tracker();
-                t1.registerAthelete(messages);
+                System.out.println(status);
 
-                //Update the status and inform clients
+
+            } else if (status.equals("Started") || status.equals("Finished") ||
+                    status.equals("DidNotStart") || status.equals("DidNotFinish")) {
+                tracker t1 = new tracker();
+                t1.generalMessage(messages);
+                System.out.println(status);
+
             } else {
                 // Garbage message
+//                System.out.println("Garbage Message : " + message);
             }
             receiveCount++;
         }
