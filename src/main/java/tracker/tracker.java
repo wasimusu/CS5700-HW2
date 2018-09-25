@@ -1,7 +1,5 @@
 package tracker;
 
-//import MessageProcessor;
-
 import tracker.Messages.MessageProcessor;
 
 import java.net.InetAddress;
@@ -9,9 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
 
-// Tracker is subject
-// tracker has list of clients
-// gets the information
 public class tracker extends Observable {
     private static ArrayList<Athelete> Atheletes = new ArrayList<Athelete>();
     private static HashMap<String, Athelete> nameAtheleteMap = new HashMap<String, Athelete>();
@@ -22,7 +17,10 @@ public class tracker extends Observable {
     public static ArrayList<Integer> clientPortAddress = new ArrayList<Integer>();
 
     public tracker() throws Exception {
-//        serverComm = new Communicator(12000);
+    }
+
+    public static Communicator getTrackerCommunicator() {
+        return serverComm;
     }
 
     public void newAthelete(String message, InetAddress address, int port) throws Exception {
@@ -123,13 +121,5 @@ public class tracker extends Observable {
         String bibNumber = messages[1];
         Client mappedClient = Client.identifyClient(port);
         this.nameAtheleteMap.get(bibNumber).unsubscribe(mappedClient);
-    }
-
-    public static void main(String[] args) throws Exception {
-        tracker tracker = new tracker();
-        MessageProcessor mp = new MessageProcessor("trackerProcessor");
-        serverComm.setProcessor(mp);
-        serverComm.start();
-        serverComm.run();
     }
 }

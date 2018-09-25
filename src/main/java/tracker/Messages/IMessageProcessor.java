@@ -1,7 +1,5 @@
 package tracker.Messages;
 
-import tracker.tracker;
-
 import java.net.InetAddress;
 
 public interface IMessageProcessor {

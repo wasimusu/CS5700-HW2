@@ -6,11 +6,10 @@ public class Message {
     static String message;
 
     public static void Message() {
-        message = "hi";
+
     }
 
     public static Message messageObject(String message, InetAddress address, int port) {
-        System.out.println("Got a message : " + message);
 
         String[] parts = message.split(",");
         System.out.println(parts[0] + "\t" + parts[1] + "\t" + parts[2]);
@@ -21,7 +20,7 @@ public class Message {
             return new HelloProcessor(message, address, port);
         }
         if (parts[0].equals("Subscribe")) {
-            return new HelloProcessor(message, address, port);
+            return new SubscribeProcessor(message, address, port);
         }
         if (parts[0].equals("Unsubscribe")) {
             return new UnsubscribeProcessor(message, address, port);
@@ -30,20 +29,20 @@ public class Message {
             return new AtheleteStatusProcessor(message, address, port);
         }
         if (parts[0].equals("DidNotStart")) {
-            return new Message();
+            return new AtheleteStatusProcessor(message, address, port);
         }
         if (parts[0].equals("Started")) {
-            return new Message();
+            return new AtheleteStatusProcessor(message, address, port);
         }
         if (parts[0].equals("Finished")) {
-            return new Message();
+            return new AtheleteStatusProcessor(message, address, port);
         }
         if (parts[0].equals("Registered")) {
-            return new HelloProcessor(message, address, port);
+            return new NewAtheleteProcessor(message, address, port);
         }
         return new Message();
     }
 
-    public void execute() {
+    public void execute() throws Exception{
     }
 }
