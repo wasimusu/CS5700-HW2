@@ -3,15 +3,6 @@ package tracker;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-// A client has pool of players to observe
-enum Status {
-    REGISTERED, STARTED, ONCOURSE, FINISHED
-}
-
-enum SEX {
-    M, F
-}
-
 public class Athelete {
     private int bibNumber;
     private double distanceCovered;
@@ -21,8 +12,6 @@ public class Athelete {
     private String lastName;
     private String firstName;
     private String sex;
-//    private Status status;
-//    private SEX sex;
 
     private ArrayList<Client> subscribers;
     private int totalSubscriber;
@@ -63,14 +52,14 @@ public class Athelete {
     public void subscribe(Client client) {
         this.subscribers.add(client);
         totalSubscriber++;
-        System.out.println("My client count : " + totalSubscriber);
+        System.out.println(bibNumber + " gained a client : " + totalSubscriber);
     }
 
     // Unsubscribe from an athelete's activity
     public void unsubscribe(Client client) {
         this.subscribers.remove(client);
         totalSubscriber--;
-        System.out.println("My client count : " + totalSubscriber);
+        System.out.println(bibNumber + " lost a client: " + totalSubscriber);
     }
 
     public void notifyChange() {
@@ -99,16 +88,4 @@ public class Athelete {
         return totalSubscriber;
     }
 
-    public static void main(String[] args) throws Exception {
-        Athelete a = new Athelete("Registered", 2, 90);
-//        Athelete b = new Athelete("Started", 1, 20);
-//        HashMap<String, Athelete> mapa = new HashMap<String, Athelete>();
-//        mapa.put("a", a);
-//        mapa.put("b", b);
-////        Athelete c = mapa.get("a");
-////        Athelete d = mapa.get("b");
-////        assert c.equals(a);
-////        assert d.equals(b);
-//        System.out.println(mapa);
-    }
 }

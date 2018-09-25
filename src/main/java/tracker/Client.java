@@ -19,15 +19,16 @@ public class Client {
     private boolean ACK;
 
     // Just become a client and you have 0 to many atheletes
-    public Client() throws Exception {
+    public Client(int portAddress) throws Exception {
 
-        communicator = new Communicator();
         ACK = false; // did it received the first start of race message
         // Key value pairs for the hashmap
-        portAddress = communicator.getLocalPort();
+        this.portAddress = portAddress;
         portAddressClientMap.put(portAddress, this);
+        communicator = new Communicator(portAddress);
+
         // Send hello to the tracker
-        this.sendHello();
+//        this.sendHello();
 
         myAtheletes = new ArrayList<Athelete>();
     }
@@ -38,10 +39,10 @@ public class Client {
     }
 
     public void setAcknoweledged() {
-        this.ACK= true;
+        this.ACK = true;
     }
 
-    public boolean isAcknoweledged(){
+    public boolean isAcknoweledged() {
         return this.ACK;
     }
 

@@ -9,7 +9,6 @@ import java.util.Observable;
 // tracker has list of clients
 // gets the information
 public class tracker extends Observable {
-    private static ArrayList<Client> Clients = new ArrayList<Client>();
     private static ArrayList<Athelete> Atheletes = new ArrayList<Athelete>();
     private static HashMap<String, Athelete> nameAtheleteMap = new HashMap<String, Athelete>();
     private static String raceStartedMessage;
@@ -22,7 +21,7 @@ public class tracker extends Observable {
         serverComm = new Communicator(ServerPort);
     }
 
-    public void registerAthelete(String message, InetAddress address, int port) throws Exception {
+    public void newAthelete(String message, InetAddress address, int port) throws Exception {
         // Making sense of the message received and registering the athelete
         String[] messages = message.split(",");
         String status = messages[0];
@@ -31,7 +30,6 @@ public class tracker extends Observable {
 
         // Instanstiate an athelete object
         System.out.println("Size of players list : " + nameAtheleteMap.size());
-        System.out.println(nameAtheleteMap);
         Athelete a = new Athelete(status, Integer.valueOf(bibNumber), timeElapsed);
         System.out.println(a);
 
@@ -55,12 +53,27 @@ public class tracker extends Observable {
         }
     }
 
-    public void helloProcessor(String message, InetAddress address, int portAddress) {
-        System.out.println(message);
+    public void helloProcessor(String message, InetAddress address, int portAddress) throws Exception {
+        System.out.println("A client started up: " + message);
         clientPortAddress.add(portAddress);
+        Client client1 = new Client(portAddress);
+        System.out.println("Newbie : " + client1);
+        if (!client1.isAcknoweledged()) {
+            Communicator trackComm = new Communicator();
+            trackComm.send(raceStartedMessage, InetAddress.getLocalHost(), portAddress);
+            System.out.println("Sent Race started message back: " + raceStartedMessage);
+        }
     }
 
-    public void updateAthelete(String message, InetAddress address, int port) throws Exception {
+
+    public void raceStarted(String message, InetAddress address, int portAddress) throws Exception {
+        System.out.println("Got hello from a client : " + message);
+        clientPortAddress.add(portAddress);
+        this.notifyObserverss(message);
+    }
+
+
+    public void atheleteStatus(String message, InetAddress address, int port) throws Exception {
         String[] messages = message.split(",");
         String status = messages[0];
         String bibNumber = messages[1];
@@ -83,15 +96,11 @@ public class tracker extends Observable {
 
     public void notifyObserverss(String message) throws Exception {
         System.out.println("Notifying : ----------------------------");
-        for (Client client : Clients) {
-            serverComm.send(message, InetAddress.getLocalHost(), client.getPortAddress());
-            System.out.println("Notifying : " + client);
+        for (Integer clientPort : clientPortAddress) {
+            this.serverComm.send(message, InetAddress.getLocalHost(), clientPort);
+            System.out.println("Notifying : " + clientPort + message);
         }
     }
-
-    // Race started -- after client subscribes to an athelete for the first time
-    // New Athelete  -- sent to every client after a new athelete registers
-    // Athelete Status --sent to the client if they are tracking the athelete when its' status change
 
     // Subscribe a client to an athelete
     public void subscribe(String message, InetAddress address, int port) throws Exception {
@@ -101,8 +110,7 @@ public class tracker extends Observable {
         this.nameAtheleteMap.get(bibNumber).subscribe(mappedClient);
         // Convey to the client that the race started
         if (!mappedClient.isAcknoweledged()) {
-            Communicator trackComm = new Communicator();
-            trackComm.send(raceStartedMessage, InetAddress.getLocalHost(), mappedClient.getPortAddress());
+            this.serverComm.send(raceStartedMessage, InetAddress.getLocalHost(), port);
         }
     }
 

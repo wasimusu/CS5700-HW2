@@ -1,7 +1,5 @@
 package tracker;
 
-import sun.plugin2.message.Message;
-
 import java.net.InetAddress;
 
 public class MessageProcessor implements IMessageProcessor {
@@ -42,10 +40,10 @@ public class MessageProcessor implements IMessageProcessor {
             String status = messages[0];
             if (status.equals("Registered")) {
                 // Sends a different message to all clients when the race starts
-                trackServer.registerAthelete(message, address, port);
+                trackServer.newAthelete(message, address, port);
 
             } else if (status.equals("OnCourse")) {
-                trackServer.updateAthelete(message, address, port);
+                trackServer.atheleteStatus(message, address, port);
                 //Update the status and inform clients
                 System.out.println(status);
 
@@ -54,8 +52,7 @@ public class MessageProcessor implements IMessageProcessor {
 
             } else if (status.equals("Started") || status.equals("Finished") ||
                     status.equals("DidNotStart") || status.equals("DidNotFinish")) {
-                trackServer.generalMessage(message, address, port);
-                System.out.println(status);
+                trackServer.atheleteStatus(message, address, port);
 
             } else if (status.equals("Subscribe")) {
                 trackServer.subscribe(message, address, port);
