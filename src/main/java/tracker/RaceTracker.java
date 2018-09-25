@@ -9,7 +9,6 @@ public class RaceTracker {
 
     public static void main(String[] args) throws Exception {
         Communicator serverComm = new Communicator(12000);
-
         MessageProcessor mp = new MessageProcessor("trackerProcessor");
         serverComm.setProcessor(mp);
         serverComm.start();

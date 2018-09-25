@@ -11,38 +11,34 @@ public class Message {
 
     public static Message messageObject(String message, InetAddress address, int port) {
 
-        String[] parts = message.split(",");
-        System.out.println(parts[0] + "\t" + parts[1] + "\t" + parts[2]);
+        String[] parts = message.split(",", 0);
+//        System.out.println(parts[0] + "\t" + parts[1] + "\t" + parts[2]);
+        System.out.println(parts[0].equals("Hello"));
+
         if (parts[0].equals("Race")) {
             return new RaceProcessor(message, address, port);
-        }
-        if (parts[0].equals("Hello")) {
+        } else if (message.equals("Hello")) {
             return new HelloProcessor(message, address, port);
-        }
-        if (parts[0].equals("Subscribe")) {
+        } else if (parts[0].equals("Subscribe")) {
             return new SubscribeProcessor(message, address, port);
-        }
-        if (parts[0].equals("Unsubscribe")) {
+        } else if (parts[0].equals("Unsubscribe")) {
             return new UnsubscribeProcessor(message, address, port);
-        }
-        if (parts[0].equals("OnCourse")) {
+        } else if (parts[0].equals("OnCourse")) {
             return new AtheleteStatusProcessor(message, address, port);
-        }
-        if (parts[0].equals("DidNotStart")) {
+        } else if (parts[0].equals("DidNotStart")) {
             return new AtheleteStatusProcessor(message, address, port);
-        }
-        if (parts[0].equals("Started")) {
+        } else if (parts[0].equals("Started")) {
             return new AtheleteStatusProcessor(message, address, port);
-        }
-        if (parts[0].equals("Finished")) {
+        } else if (parts[0].equals("Finished")) {
             return new AtheleteStatusProcessor(message, address, port);
-        }
-        if (parts[0].equals("Registered")) {
+        } else if (parts[0].equals("Registered")) {
             return new NewAtheleteProcessor(message, address, port);
+        } else {
+            System.out.println(message);
         }
         return new Message();
     }
 
-    public void execute() throws Exception{
+    public void execute() throws Exception {
     }
 }

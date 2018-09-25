@@ -16,16 +16,13 @@ public class HelloProcessor extends Message{
         this.port = port;
     }
 
-    public void execute(String message, InetAddress address, int port) throws Exception {
-        System.out.println("Got a message : " + message);
-        System.out.println("Executing in Hello "+message+"\t"+address+port);
-        Communicator comm = tracker.getTrackerCommunicator();
-        comm.send("Yeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", InetAddress.getLocalHost(), port);
-    }
     public void execute() throws Exception {
-        System.out.println("Got a message : " + message);
         System.out.println("Executing in Hello "+message+"\t"+address+port);
-        Communicator comm = tracker.getTrackerCommunicator();
+        Communicator comm = new Communicator(12000);
+        if(comm==null){
+            System.out.println("Why null");
+        }
         comm.send("Yeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", InetAddress.getLocalHost(), port);
+        comm.close();
     }
 }

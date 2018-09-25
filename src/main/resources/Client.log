@@ -1,4 +1,4 @@
-2018-09-25 11:10:58,303 [1] DEBUG Base.Communicator - Setup UDP Client
-2018-09-25 11:10:58,303 [1] DEBUG Base.Communicator - Local Port 62111
-2018-09-25 11:10:58,303 [3] DEBUG Base.Communicator - Communicator Started
-2018-09-25 11:10:58,334 [1] DEBUG Base.Communicator - Send Hello to 127.0.0.1:12000
+2018-09-25 11:28:37,806 [1] DEBUG Base.Communicator - Setup UDP Client
+2018-09-25 11:28:37,806 [1] DEBUG Base.Communicator - Local Port 53786
+2018-09-25 11:28:37,806 [3] DEBUG Base.Communicator - Communicator Started
+2018-09-25 11:28:37,837 [1] DEBUG Base.Communicator - Send Hello to 127.0.0.1:12000

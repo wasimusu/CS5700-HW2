@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0471ae6-4661-4b49-b8e9-9d64f77737dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS5700-HW2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="b0471ae6-4661-4b49-b8e9-9d64f77737dc" name="Default Changelist" comment="Builds and runs strategy starting">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Communicator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/IMessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/IMessageProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/IMessageProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Client.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Client.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -95,7 +90,9 @@
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.48" value="1" />
@@ -106,106 +103,163 @@
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="35" />
+          <entry key="JAVA/tracker" value="2" />
+          <entry key="JavaScript-modules-diagram/C:/Users/pramesh/Documents/CS5700-HW2/src" value="1" />
+          <entry key="java" value="71" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="35" />
+          <entry key="JAVA" value="71" />
+          <entry key="UML" value="3" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12567" />
-          <entry key="txt" value="301" />
+          <entry key="dummy" value="11" />
+          <entry key="java" value="15078" />
+          <entry key="txt" value="419" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12567" />
-          <entry key="PLAIN_TEXT" value="301" />
+          <entry key="JAVA" value="15078" />
+          <entry key="PLAIN_TEXT" value="430" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#2388#2389#0" expanded="true" />
-                <element signature="e#2439#2440#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#310#318#0" expanded="true" />
-                <element signature="e#386#396#0" expanded="true" />
-                <element signature="e#474#492#0" expanded="true" />
-                <element signature="e#691#708#0" expanded="true" />
-                <element signature="e#782#791#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="279">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="211">
+                  <caret line="20" column="50" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="50" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="24">
+                  <caret line="5" selection-start-line="5" selection-end-line="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="17" selection-start-line="9" selection-end-line="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="149">
+                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="5" selection-start-line="5" selection-end-line="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -216,19 +270,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>myAthelets</find>
-      <find>FirstName</find>
-      <find>subscriber</find>
-      <find>for</find>
-      <find>sendMessageToClients</find>
-      <find>no</find>
-      <find>==</find>
-      <find>HashMap</find>
-      <find>Map</find>
-      <find>AtheleteIdMap</find>
       <find>ArrayList</find>
       <find>status</find>
-      <find>register</find>
       <find>toString</find>
       <find>update</find>
       <find>java.lang.IllegalArgumentException: Port out of range:120000</find>
@@ -240,12 +283,23 @@
       <find>Client</find>
       <find>size of player</find>
       <find>my client</find>
-      <find>12000</find>
       <find>Hello</find>
       <find>subscribe</find>
       <find>Subs</find>
       <find>Notifying</find>
       <find>Loop</find>
+      <find>Race,Bension Loop,16090</find>
+      <find>trackComm</find>
+      <find>ackno</find>
+      <find>serverC</find>
+      <find>12000</find>
+      <find>serverPort</find>
+      <find>serverComm</find>
+      <find>register</find>
+      <find>received</find>
+      <find>Got a message</find>
+      <find>got a message</find>
+      <find>race</find>
     </findStrings>
     <replaceStrings>
       <replace>Clients</replace>
@@ -257,6 +311,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -560,14 +615,29 @@
         <option value="$PROJECT_DIR$/src/main/java/tracker/DummyMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Atheletes.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tracker/ClientTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tracker/ClientTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/RegisteredProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/UnsubscribeProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/HelloProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/RaceProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/tracker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" />
       </list>
     </option>
   </component>
@@ -576,6 +646,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -591,6 +667,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -624,25 +701,63 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tracker" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tracker" type="462c0819:PsiDirectoryNode" />
+              <item name="Messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tracking.Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS5700-HW2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537853007747" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537897244165" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tracker.Messages" />
+      <recent name="tracker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pramesh\Documents\CS5700-HW2\src\main\java\tracker" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -656,13 +771,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.tracker">
+  <component name="RunManager" selected="Application.RaceTracker">
     <configuration name="Athelete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tracker.Athelete" />
       <module name="Tracking.Server_main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tracker.*" />
+          <option name="PATTERN" value="tracker.Messages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -675,7 +790,20 @@
       <module name="Tracking.Server_main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tracker.*" />
+          <option name="PATTERN" value="tracker.Messages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RaceTracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tracker.RaceTracker" />
+      <module name="Tracking.Server_main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tracker.Messages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -688,24 +816,7 @@
       <module name="Tracking.Server_main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All Features in: test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="3" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="Tracking.Server_test" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm3SMFormatter" />
-      <option name="SUGGESTED_NAME" value="All Features in: test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="PATTERN" value="tracker.Messages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -734,7 +845,7 @@
       <module name="Tracking.Server_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tracker.*" />
+          <option name="PATTERN" value="tracker.Messages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -747,18 +858,18 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="JUnit.CommunicatorTest" />
-      <item itemvalue="Cucumber java.All Features in: test" />
       <item itemvalue="Cucumber java.All Features in: tracker" />
       <item itemvalue="Application.tracker" />
       <item itemvalue="Application.Athelete" />
+      <item itemvalue="Application.RaceTracker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RaceTracker" />
+        <item itemvalue="Cucumber java.All Features in: tracker" />
         <item itemvalue="Application.tracker" />
         <item itemvalue="Application.Athelete" />
-        <item itemvalue="Cucumber java.All Features in: tracker" />
         <item itemvalue="JUnit.CommunicatorTest" />
-        <item itemvalue="Cucumber java.All Features in: test" />
       </list>
     </recent_temporary>
   </component>
@@ -785,7 +896,9 @@
       <workItem from="1537683267182" duration="4641000" />
       <workItem from="1537723846184" duration="16310000" />
       <workItem from="1537809758762" duration="8257000" />
-      <workItem from="1537848750431" duration="4219000" />
+      <workItem from="1537848750431" duration="5954000" />
+      <workItem from="1537856229464" duration="3232000" />
+      <workItem from="1537887297645" duration="9835000" />
     </task>
     <task id="LOCAL-00001" summary="added classes and their methods">
       <created>1537504353584</created>
@@ -836,7 +949,35 @@
       <option name="project" value="LOCAL" />
       <updated>1537816112807</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Builds and runs strategy starting">
+      <created>1537853123675</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537853123675</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Builds and runs strategy starting">
+      <created>1537853213075</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537853213075</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Strategy patern initial commit">
+      <created>1537893504794</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1537893504794</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Message passing works for each message">
+      <created>1537895908941</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537895908941</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -872,13 +1013,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59682000" />
+    <option name="totallyTimeSpent" value="74484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49565217" visible="true" weight="0.22390318" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49565217" visible="true" weight="0.22995462" />
       <window_info id="Structure" order="1" sideWeight="0.5043478" side_tool="true" weight="0.22390318" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -887,28 +1028,28 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3496732" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.3496732" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32843137" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" visible="true" weight="0.31862745" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.29425114" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -925,7 +1066,10 @@
     <MESSAGE value="Added messages" />
     <MESSAGE value="Found lots of bugs in static variables usage" />
     <MESSAGE value="Messaging works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Messaging works" />
+    <MESSAGE value="Builds and runs strategy starting" />
+    <MESSAGE value="Strategy patern initial commit" />
+    <MESSAGE value="Message passing works for each message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Message passing works for each message" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/TestCommunicator.java" />
@@ -951,13 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/ClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/MessageProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -969,13 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1007,7 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1022,58 +1151,197 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="31" />
+          <folding>
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/DatagramSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="102">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RegisteredProcessor.java" />
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/pramesh/Documents/CS5700-HW2/src">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="511.0" y="322.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tracker">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tracker</OriginalElement>
+          <nodes>
+            <node x="" y="">tracker.AtheleteTest</node>
+            <node x="" y="">tracker.Communicator</node>
+            <node x="" y="">tracker.CommunicatorTest</node>
+            <node x="" y="">tracker.Client</node>
+            <node x="" y="">tracker.Athelete</node>
+            <node x="" y="">tracker.TrackerTest</node>
+            <node x="" y="">tracker.tracker</node>
+            <node x="" y="">tracker.ClientTest</node>
+            <node x="" y="">tracker.Messages</node>
+            <node x="" y="">tracker.MessageProcessorTest</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="184.0" y="653.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="120" column="1" lean-forward="true" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+        <state relative-caret-position="149">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="5" selection-start-line="5" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" selection-start-line="5" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="279">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#310#318#0" expanded="true" />
-            <element signature="e#386#396#0" expanded="true" />
-            <element signature="e#474#492#0" expanded="true" />
-            <element signature="e#691#708#0" expanded="true" />
-            <element signature="e#782#791#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/MessageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="9" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#2388#2389#0" expanded="true" />
-            <element signature="e#2439#2440#0" expanded="true" />
           </folding>
         </state>
       </provider>
