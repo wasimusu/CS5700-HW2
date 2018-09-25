@@ -10,49 +10,12 @@ import java.util.Observable;
 public class tracker extends Observable {
     private static ArrayList<Athelete> Atheletes = new ArrayList<Athelete>();
     private static HashMap<String, Athelete> nameAtheleteMap = new HashMap<String, Athelete>();
-    private static String raceStartedMessage;
     private int ServerPort = 12000;
     private static Communicator serverComm;
     public static HashMap<Integer, Client> portAddressClientMap = new HashMap<Integer, Client>();
     public static ArrayList<Integer> clientPortAddress = new ArrayList<Integer>();
 
     public tracker() throws Exception {
-    }
-
-    public static Communicator getTrackerCommunicator() {
-        return serverComm;
-    }
-
-    public void newAthelete(String message, InetAddress address, int port) throws Exception {
-        // Making sense of the message received and registering the athelete
-        String[] messages = message.split(",");
-        String status = messages[0];
-        String bibNumber = messages[1];
-        int timeElapsed = Integer.valueOf(messages[2]);
-
-        // Instanstiate an athelete object
-        System.out.println("Size of players list : " + nameAtheleteMap.size());
-        Athelete a = new Athelete(status, Integer.valueOf(bibNumber), timeElapsed);
-        System.out.println(a);
-
-        // Map is required to retrieve athelete object based on string id
-        nameAtheleteMap.put(bibNumber, a);
-        Atheletes.add(a);
-
-        this.notifyObserverss(message);
-    }
-
-    public void generalMessage(String message, InetAddress address, int port) throws Exception {
-        String[] messages = message.split(",");
-        String status = messages[0];
-
-        // Notify everyone that race stared
-        if (status.equals("Race")) {
-            raceStartedMessage = String.join(" ", messages);
-            this.notifyObserverss(raceStartedMessage);
-        } else {
-            this.notifyObserverss(message);
-        }
     }
 
     public void helloProcessor(String message, InetAddress address, int portAddress) throws Exception {
@@ -62,8 +25,8 @@ public class tracker extends Observable {
         System.out.println("Newbie : " + client1);
         if (!client1.isAcknoweledged()) {
             Communicator trackComm = new Communicator();
-            trackComm.send(raceStartedMessage, InetAddress.getLocalHost(), portAddress);
-            System.out.println("Sent Race started message back: " + raceStartedMessage);
+//            trackComm.send(raceStartedMessage, InetAddress.getLocalHost(), portAddress);
+//            System.out.println("Sent Race started message back: " + raceStartedMessage);
         }
     }
 
@@ -71,28 +34,6 @@ public class tracker extends Observable {
         System.out.println("Got hello from a client : " + message);
         clientPortAddress.add(portAddress);
         this.notifyObserverss(message);
-    }
-
-
-    public void atheleteStatus(String message, InetAddress address, int port) throws Exception {
-        String[] messages = message.split(",");
-        String status = messages[0];
-        String bibNumber = messages[1];
-        int timeElapsed = Integer.valueOf(messages[2]);
-        float distanceCovered = Float.valueOf(messages[3]);
-
-        Athelete a = nameAtheleteMap.get(bibNumber);
-        if (a != null) {
-            a.updateStatus(status, timeElapsed, distanceCovered);
-            // Map is required to retrieve athelete object based on string id
-            nameAtheleteMap.put(bibNumber, a);
-            System.out.println("Updated : " + a);
-
-            // Notify all the clients of status change
-            this.notifyObserverss(message);
-        } else {
-            System.out.println("Null object encountered. Can't update status");
-        }
     }
 
     public void notifyObserverss(String message) throws Exception {
@@ -103,23 +44,4 @@ public class tracker extends Observable {
         }
     }
 
-    // Subscribe a client to an athelete
-    public void subscribe(String message, InetAddress address, int port) throws Exception {
-        String[] messages = message.split(",");
-        String bibNumber = messages[1];
-        Client mappedClient = Client.identifyClient(port);
-        this.nameAtheleteMap.get(bibNumber).subscribe(mappedClient);
-        // Convey to the client that the race started
-        if (!mappedClient.isAcknoweledged()) {
-            this.serverComm.send(raceStartedMessage, InetAddress.getLocalHost(), port);
-        }
-    }
-
-    // Unsubscribe a client from an athelete
-    public void unsubscribe(String message, InetAddress address, int port) throws Exception {
-        String[] messages = message.split(",");
-        String bibNumber = messages[1];
-        Client mappedClient = Client.identifyClient(port);
-        this.nameAtheleteMap.get(bibNumber).unsubscribe(mappedClient);
-    }
 }

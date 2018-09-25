@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0471ae6-4661-4b49-b8e9-9d64f77737dc" name="Default Changelist" comment="Builds and runs strategy starting">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b0471ae6-4661-4b49-b8e9-9d64f77737dc" name="Default Changelist" comment="Added execution of messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Athelete.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/tracker/Client.class" afterDir="false" />
@@ -11,11 +10,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/classes/tracker/MessageProcessor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/Client.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/tracker/CommunicatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tracker/tracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Client.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Client.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -87,7 +90,7 @@
     <session id="-389292335">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.116" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -99,24 +102,25 @@
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JAVA/tracker" value="2" />
           <entry key="JavaScript-modules-diagram/C:/Users/pramesh/Documents/CS5700-HW2/src" value="1" />
-          <entry key="java" value="71" />
+          <entry key="java" value="94" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="71" />
+          <entry key="JAVA" value="94" />
           <entry key="UML" value="3" />
           <entry key="XML" value="2" />
         </counts>
@@ -124,142 +128,145 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="15078" />
-          <entry key="txt" value="419" />
+          <entry key="java" value="16051" />
+          <entry key="txt" value="515" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15078" />
-          <entry key="PLAIN_TEXT" value="430" />
+          <entry key="JAVA" value="16051" />
+          <entry key="PLAIN_TEXT" value="526" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="279">
-                  <caret line="25" selection-start-line="25" selection-end-line="25" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="20" column="50" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="50" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24">
-                  <caret line="5" selection-start-line="5" selection-end-line="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" selection-start-line="9" selection-end-line="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="5" selection-start-line="5" selection-end-line="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1411">
+              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+                <element signature="e#1369#1370#0" expanded="true" />
+                <element signature="e#2332#2333#0" expanded="true" />
+                <element signature="e#2359#2360#0" expanded="true" />
+                <element signature="e#2470#2471#0" expanded="true" />
+                <element signature="e#2508#2509#0" expanded="true" />
+                <element signature="e#2582#2583#0" expanded="true" />
+                <element signature="e#2614#2615#0" expanded="true" />
+                <element signature="e#2710#2711#0" expanded="true" />
+                <element signature="e#2748#2749#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -270,8 +277,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ArrayList</find>
-      <find>status</find>
       <find>toString</find>
       <find>update</find>
       <find>java.lang.IllegalArgumentException: Port out of range:120000</find>
@@ -300,6 +305,8 @@
       <find>Got a message</find>
       <find>got a message</find>
       <find>race</find>
+      <find>BibNumberAthelete</find>
+      <find>newA</find>
     </findStrings>
     <replaceStrings>
       <replace>Clients</replace>
@@ -308,6 +315,7 @@
       <replace>notifyObservers</replace>
       <replace>HashMap</replace>
       <replace>nameAtheleteMap</replace>
+      <replace>bibNumberAthelete</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -618,8 +626,6 @@
         <option value="$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/IMessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Communicator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/ClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/RegisteredProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/UnsubscribeProcessor.java" />
@@ -627,17 +633,19 @@
         <option value="$PROJECT_DIR$/src/main/java/tracker/HelloProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/RaceProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/tracker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/IMessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Athelete.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tracker/tracker.java" />
       </list>
     </option>
   </component>
@@ -654,8 +662,6 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
@@ -667,7 +673,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -735,20 +741,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537897244165" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537901545231" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -898,7 +905,8 @@
       <workItem from="1537809758762" duration="8257000" />
       <workItem from="1537848750431" duration="5954000" />
       <workItem from="1537856229464" duration="3232000" />
-      <workItem from="1537887297645" duration="9835000" />
+      <workItem from="1537887297645" duration="13036000" />
+      <workItem from="1537900612989" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="added classes and their methods">
       <created>1537504353584</created>
@@ -977,7 +985,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537895908941</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Debug index out of range on client startup">
+      <created>1537897307559</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1537897307559</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1013,13 +1028,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74484000" />
+    <option name="totallyTimeSpent" value="78607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49565217" visible="true" weight="0.22995462" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49565217" visible="true" weight="0.2655068" />
       <window_info id="Structure" order="1" sideWeight="0.5043478" side_tool="true" weight="0.22390318" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1036,9 +1051,9 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32843137" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" visible="true" weight="0.31862745" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49924356" weight="0.31862745" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1069,7 +1084,9 @@
     <MESSAGE value="Builds and runs strategy starting" />
     <MESSAGE value="Strategy patern initial commit" />
     <MESSAGE value="Message passing works for each message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Message passing works for each message" />
+    <MESSAGE value="Debug index out of range on client startup" />
+    <MESSAGE value="Added execution of messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added execution of messages" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/TestCommunicator.java" />
@@ -1092,20 +1109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/MessageProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/TrackerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1137,28 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="31" />
-          <folding>
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,26 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/ClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RegisteredProcessor.java" />
     <entry file="uml://JavaScript-modules-diagram/C:/Users/pramesh/Documents/CS5700-HW2/src">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -1241,16 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="120" column="1" lean-forward="true" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Communicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1258,10 +1213,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/MessageProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="5" selection-start-line="5" selection-end-line="14" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/CommunicatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/ClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/AtheleteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tracker/TrackerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,58 +1279,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/MessageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/AtheleteStatusProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="663">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Athelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#2332#2333#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2508#2509#0" expanded="true" />
+            <element signature="e#2582#2583#0" expanded="true" />
+            <element signature="e#2614#2615#0" expanded="true" />
+            <element signature="e#2710#2711#0" expanded="true" />
+            <element signature="e#2748#2749#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/SubscribeProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" selection-start-line="5" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/UnsubscribeProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="527">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/RaceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/NewAtheleteProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1332,14 +1361,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/RaceTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="9" selection-end-line="17" />
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/Messages/HelloProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="154">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

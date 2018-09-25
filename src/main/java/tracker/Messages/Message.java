@@ -6,14 +6,10 @@ public class Message {
     static String message;
 
     public static void Message() {
-
     }
 
     public static Message messageObject(String message, InetAddress address, int port) {
-
         String[] parts = message.split(",", 0);
-//        System.out.println(parts[0] + "\t" + parts[1] + "\t" + parts[2]);
-        System.out.println(parts[0].equals("Hello"));
 
         if (parts[0].equals("Race")) {
             return new RaceProcessor(message, address, port);

@@ -2,27 +2,35 @@ package tracker.Messages;
 
 import tracker.Communicator;
 import tracker.tracker;
+import tracker.Client;
 
 import java.net.InetAddress;
 
-public class HelloProcessor extends Message{
+public class HelloProcessor extends Message {
     private String message;
     private InetAddress address;
     private int port;
 
-    public HelloProcessor(String message, InetAddress address, int port){
+    public HelloProcessor(String message, InetAddress address, int port) {
         this.message = message;
         this.address = address;
         this.port = port;
     }
 
     public void execute() throws Exception {
-        System.out.println("Executing in Hello "+message+"\t"+address+port);
-        Communicator comm = new Communicator(12000);
-        if(comm==null){
-            System.out.println("Why null");
+        System.out.println("A client started up" + message + "\t" + address + port);
+
+        // Create a client with the same endpoint
+        Client client = new Client(port);
+        System.out.println(client);
+
+        // Send out a race stared message to client if you have not already
+        if (!client.isAcknoweledged()) {
+            Communicator trackComm = new Communicator();
+            trackComm.send("Sent Race started message back", InetAddress.getLocalHost(), port);
+            System.out.println("Sent Race started message back: ");
+            trackComm.close();
         }
-        comm.send("Yeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", InetAddress.getLocalHost(), port);
-        comm.close();
+
     }
 }

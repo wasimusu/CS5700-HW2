@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Athelete {
+    public static HashMap<Integer, Athelete> bibNumberAthelete = new HashMap<Integer, Athelete>();
+
     private int bibNumber;
     private double distanceCovered;
     private double time;
@@ -35,6 +37,8 @@ public class Athelete {
         this.time = time;
         subscribers = new ArrayList<Client>();
         System.out.println(this);
+
+        bibNumberAthelete.put(bibNumber, this);
     }
 
     public String toString() {
@@ -88,4 +92,7 @@ public class Athelete {
         return totalSubscriber;
     }
 
+    public static Athelete getAtheleteByBibNumber(int bibNumber) {
+        return bibNumberAthelete.get(bibNumber);
+    }
 }

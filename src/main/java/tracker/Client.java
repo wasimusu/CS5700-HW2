@@ -27,9 +27,6 @@ public class Client {
         portAddressClientMap.put(portAddress, this);
         communicator = new Communicator(portAddress);
 
-        // Send hello to the tracker
-//        this.sendHello();
-
         myAtheletes = new ArrayList<Athelete>();
     }
 
@@ -63,11 +60,6 @@ public class Client {
 
     public void sendUnsubscribe(int bibNumber) throws Exception {
         String message = "Subscribe," + String.valueOf(bibNumber);
-        sendMessageToTracker(message);
-    }
-
-    public void sendHello() throws Exception {
-        String message = "Helloworld";
         sendMessageToTracker(message);
     }
 
