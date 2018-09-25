@@ -24,7 +24,7 @@ public class Message {
         } else if (parts[0].equals("DidNotStart")) {
             return new AtheleteStatusProcessor(message, address, port);
         } else if (parts[0].equals("Started")) {
-            return new AtheleteStatusProcessor(message, address, port);
+            return new StartedProcessor(message, address, port);
         } else if (parts[0].equals("Finished")) {
             return new AtheleteStatusProcessor(message, address, port);
         } else if (parts[0].equals("Registered")) {

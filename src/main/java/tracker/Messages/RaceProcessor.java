@@ -1,6 +1,5 @@
 package tracker.Messages;
 
-import tracker.tracker;
 import tracker.Communicator;
 import tracker.Client;
 

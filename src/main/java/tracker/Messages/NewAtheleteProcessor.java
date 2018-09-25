@@ -29,7 +29,6 @@ public class NewAtheleteProcessor extends Message {
 
         // Instanstiate an athelete object
         Athelete a = new Athelete(status, bibNumber, time, firstName, lastName, gender, age);
-        System.out.println(a);
 
         // Notify Clients
     }

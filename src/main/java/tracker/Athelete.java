@@ -15,7 +15,7 @@ public class Athelete {
     private String firstName;
     private String sex;
 
-    private ArrayList<Client> subscribers;
+    private ArrayList<Integer> subscribersPortAddress;
     private int totalSubscriber;
     private static HashMap<String, Athelete> mapa;
 
@@ -28,16 +28,7 @@ public class Athelete {
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println(this);
-        subscribers = new ArrayList<Client>();
-    }
-
-    public Athelete(String status, int bibNumber, int time) {
-        this.bibNumber = bibNumber;
-        this.status = status;
-        this.time = time;
-        subscribers = new ArrayList<Client>();
-        System.out.println(this);
-
+        subscribersPortAddress = new ArrayList<Integer>();
         bibNumberAthelete.put(bibNumber, this);
     }
 
@@ -53,25 +44,25 @@ public class Athelete {
     }
 
     // Subscribe to an athelete's activity
-    public void subscribe(Client client) {
-        this.subscribers.add(client);
+    public void subscribe(Client client) throws Exception {
+        this.subscribersPortAddress.add(client.getPortAddress());
         totalSubscriber++;
         System.out.println(bibNumber + " gained a client : " + totalSubscriber);
     }
 
     // Unsubscribe from an athelete's activity
-    public void unsubscribe(Client client) {
-        this.subscribers.remove(client);
+    public void unsubscribe(Client client) throws Exception {
+        this.subscribersPortAddress.remove(client.getPortAddress());
         totalSubscriber--;
         System.out.println(bibNumber + " lost a client: " + totalSubscriber);
     }
 
-    public void notifyChange() {
-        // Notify the tracker maybe
-        for (Client subscriber : subscribers) {
-            // Somehow inform them that a change occured
-        }
-    }
+//    public void notifyChange() {
+//        // Notify the tracker maybe
+//        for (Client subscriber : subscribers) {
+//            // Somehow inform them that a change occured
+//        }
+//    }
 
     public double getTime() {
         return time;

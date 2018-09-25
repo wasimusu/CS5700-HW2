@@ -24,12 +24,9 @@ public class AtheleteStatusProcessor extends Message {
         float distanceCovered = Float.valueOf(messages[3]);
 
         Athelete a = Athelete.bibNumberAthelete.get(Integer.valueOf(bibNumber));
-        System.out.println("Old " + a);
-
         if (a != null) {
             a.updateStatus(status, timeElapsed, distanceCovered);
-            // Map is required to retrieve athelete object based on string id
-            System.out.println("Updated : " + a);
+            System.out.println("Updated Athelete: " + a);
 
             // Notify all the clients of status change
         } else {

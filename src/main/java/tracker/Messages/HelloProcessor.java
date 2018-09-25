@@ -1,7 +1,6 @@
 package tracker.Messages;
 
 import tracker.Communicator;
-import tracker.tracker;
 import tracker.Client;
 
 import java.net.InetAddress;
@@ -31,6 +30,5 @@ public class HelloProcessor extends Message {
             System.out.println("Sent Race started message back: ");
             trackComm.close();
         }
-
     }
 }

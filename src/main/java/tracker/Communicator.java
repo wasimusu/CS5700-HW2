@@ -125,6 +125,7 @@ public class Communicator implements Runnable {
      * Start this Communicator as an active object.  This create a thread on which the Run methods is executed
      */
     public void start() {
+        System.out.print("......................................................");
         if (_keepGoing) return;
 
         _keepGoing = true;

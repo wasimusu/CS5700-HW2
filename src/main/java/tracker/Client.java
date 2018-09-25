@@ -22,17 +22,16 @@ public class Client {
     public Client(int portAddress) throws Exception {
 
         ACK = false; // did it received the first start of race message
-        // Key value pairs for the hashmap
         this.portAddress = portAddress;
         portAddressClientMap.put(portAddress, this);
-        communicator = new Communicator(portAddress);
+//        communicator = new Communicator(portAddress);
 
         myAtheletes = new ArrayList<Athelete>();
     }
 
     @Override
     public String toString() {
-        return "Client : " + portAddressClientMap.size() + "\tPort Address : " + portAddress;
+        return "Client : \tPort Address : " + portAddress;
     }
 
     public void setAcknoweledged() {
@@ -67,6 +66,4 @@ public class Client {
         communicator.send(message, InetAddress.getLocalHost(), 12000);
     }
 
-    public static void main(String[] args) throws Exception {
-    }
 }
