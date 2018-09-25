@@ -1,5 +1,9 @@
 package tracker;
 
+//import MessageProcessor;
+
+import tracker.Messages.MessageProcessor;
+
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,13 +16,13 @@ public class tracker extends Observable {
     private static ArrayList<Athelete> Atheletes = new ArrayList<Athelete>();
     private static HashMap<String, Athelete> nameAtheleteMap = new HashMap<String, Athelete>();
     private static String raceStartedMessage;
-    int ServerPort = 12000;
+    private int ServerPort = 12000;
     private static Communicator serverComm;
     public static HashMap<Integer, Client> portAddressClientMap = new HashMap<Integer, Client>();
     public static ArrayList<Integer> clientPortAddress = new ArrayList<Integer>();
 
     public tracker() throws Exception {
-        serverComm = new Communicator(ServerPort);
+//        serverComm = new Communicator(12000);
     }
 
     public void newAthelete(String message, InetAddress address, int port) throws Exception {
@@ -64,7 +68,6 @@ public class tracker extends Observable {
             System.out.println("Sent Race started message back: " + raceStartedMessage);
         }
     }
-
 
     public void raceStarted(String message, InetAddress address, int portAddress) throws Exception {
         System.out.println("Got hello from a client : " + message);
@@ -123,6 +126,7 @@ public class tracker extends Observable {
     }
 
     public static void main(String[] args) throws Exception {
+        tracker tracker = new tracker();
         MessageProcessor mp = new MessageProcessor("trackerProcessor");
         serverComm.setProcessor(mp);
         serverComm.start();
