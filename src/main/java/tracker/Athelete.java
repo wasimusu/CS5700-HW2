@@ -1,7 +1,5 @@
 package tracker;
 
-import javafx.beans.Observable;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -65,14 +63,14 @@ public class Athelete {
     public void subscribe(Client client) {
         this.subscribers.add(client);
         totalSubscriber++;
-        System.out.println("My client count : "+totalSubscriber);
+        System.out.println("My client count : " + totalSubscriber);
     }
 
     // Unsubscribe from an athelete's activity
     public void unsubscribe(Client client) {
         this.subscribers.remove(client);
         totalSubscriber--;
-        System.out.println("My client count : "+totalSubscriber);
+        System.out.println("My client count : " + totalSubscriber);
     }
 
     public void notifyChange() {
@@ -101,7 +99,7 @@ public class Athelete {
         return totalSubscriber;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Athelete a = new Athelete("Registered", 2, 90);
 //        Athelete b = new Athelete("Started", 1, 20);
 //        HashMap<String, Athelete> mapa = new HashMap<String, Athelete>();

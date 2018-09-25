@@ -1,17 +1,18 @@
 package tracker;
 
+import sun.plugin2.message.Message;
+
 import java.net.InetAddress;
-import java.net.SocketException;
 
 public class MessageProcessor implements IMessageProcessor {
 
     private String name;
     private int receiveCount;
-    private static tracker t1;
+    private static tracker trackServer;
 
-    public MessageProcessor(String name) throws Exception{
+    public MessageProcessor(String name) throws Exception {
         this.name = name;
-        t1 = new tracker();
+        trackServer = new tracker();
     }
 
     public void setName(String name) {
@@ -23,40 +24,48 @@ public class MessageProcessor implements IMessageProcessor {
         if (message == null) {
             System.out.println("Null string");
             return;
-        } else if (address == null) {
+        }
+        if (address == null) {
             System.out.println("Null address");
             return;
-        } else {
+        }
+
+//        Message message1 = Message.createObject(message+","+address.toString()+","+String.valueOf(port));
+//        if(message1!=null){message1.execute(tracker);}
+//        receiveCount++;
+//    }
+
+        else {
 
             System.out.println(String.format("%s received: %s from %s:%d", name, message, address.toString(), port));
             String[] messages = message.split(",", 0);
             String status = messages[0];
-
             if (status.equals("Registered")) {
                 // Sends a different message to all clients when the race starts
-                t1.registerAthelete(messages);
+                trackServer.registerAthelete(message, address, port);
 
             } else if (status.equals("OnCourse")) {
-                t1.updateAthelete(messages);
+                trackServer.updateAthelete(message, address, port);
                 //Update the status and inform clients
                 System.out.println(status);
 
+            } else if (status.equals("Hello")) {
+                trackServer.helloProcessor(message, address, port);
 
             } else if (status.equals("Started") || status.equals("Finished") ||
                     status.equals("DidNotStart") || status.equals("DidNotFinish")) {
-                t1.generalMessage(messages);
+                trackServer.generalMessage(message, address, port);
                 System.out.println(status);
 
             } else if (status.equals("Subscribe")) {
-                t1.subscribe(messages[1], port);
+                trackServer.subscribe(message, address, port);
 
             } else if (status.equals("Unsubscribe")) {
-                t1.unsubscribe(messages[1], port);
+                trackServer.unsubscribe(message, address, port);
             } else {
                 // Garbage message
 //                System.out.println("Garbage Message : " + message);
             }
-            receiveCount++;
         }
     }
 

@@ -1,6 +1,5 @@
 package tracker;
 
-import sun.plugin2.message.Message;
 
 import java.awt.*;
 import java.net.DatagramSocket;

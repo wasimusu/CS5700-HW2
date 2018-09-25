@@ -6,36 +6,43 @@ package tracker;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Observer;
 
 // Each client has a port number on which to communicate that
 // status changed for one of its atheletes
 // Observer
 public class Client {
-    private static int clientCount = 0;  // no of clients instantiated so far
-    public static HashMap<Integer, Client> portAddressClientMap;
+    public static HashMap<Integer, Client> portAddressClientMap = new HashMap<Integer, Client>();
 
     private int portAddress;
     private ArrayList<Athelete> myAtheletes;
     private Communicator communicator;
-    private int dependablesCount;
+    private boolean ACK;
 
     // Just become a client and you have 0 to many atheletes
     public Client() throws Exception {
-        clientCount++;
-        portAddressClientMap = new HashMap<Integer, Client>();
 
-        this.dependablesCount = 0;
         communicator = new Communicator();
-        portAddressClientMap.put(communicator.getLocalPort(), this);
-        this.communicator.send("Hello", InetAddress.getLocalHost(), 12000);
+        ACK = false; // did it received the first start of race message
+        // Key value pairs for the hashmap
+        portAddress = communicator.getLocalPort();
+        portAddressClientMap.put(portAddress, this);
+        // Send hello to the tracker
+        this.sendHello();
 
         myAtheletes = new ArrayList<Athelete>();
     }
 
     @Override
     public String toString() {
-        return "Client : "+clientCount+ "\tPort Address : "+portAddress;
+        return "Client : " + portAddressClientMap.size() + "\tPort Address : " + portAddress;
+    }
+
+    public void setAcknoweledged() {
+        this.ACK= true;
+    }
+
+    public boolean isAcknoweledged(){
+        return this.ACK;
     }
 
     public int getPortAddress() throws Exception {
@@ -47,39 +54,26 @@ public class Client {
         return portAddressClientMap.get(portAddress);
     }
 
-    // get the number of atheletes the client is watching
-    public int getDependablesCount() {
-        return this.dependablesCount;
-    }
-
     // Series of messages that are sent by client to the tracker
     public void sendSubscribe(int bibNumber) throws Exception {
         String message = "Subscribe," + String.valueOf(bibNumber);
         sendMessageToTracker(message);
-        this.dependablesCount++;
     }
 
     public void sendUnsubscribe(int bibNumber) throws Exception {
         String message = "Subscribe," + String.valueOf(bibNumber);
         sendMessageToTracker(message);
-        this.dependablesCount--;
     }
 
     public void sendHello() throws Exception {
-        String message = "Hello";
+        String message = "Helloworld";
         sendMessageToTracker(message);
     }
 
     public void sendMessageToTracker(String message) throws Exception {
-        communicator = new Communicator(this.portAddress);
         communicator.send(message, InetAddress.getLocalHost(), 12000);
     }
 
-    public void update() {
-        for (Athelete athelete : myAtheletes) {
-            // get updated status
-            // maybe just print it
-            // Display the updated status
-        }
+    public static void main(String[] args) throws Exception {
     }
 }
