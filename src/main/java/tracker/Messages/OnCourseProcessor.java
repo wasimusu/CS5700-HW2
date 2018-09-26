@@ -33,7 +33,7 @@ public class OnCourseProcessor extends Message {
             // Notify All the existing clients
             String startTime = timeElapsed;
             //Message Format : Status,<bib number>,<status>,<start time>,<distance covered in meters>,<last updated time>, <finished time>
-            String broadcastMessage = "Status," + messages[1] + "," + status + "," + startTime +","+ distanceCovered + "," + messages[2] + "," + startTime;
+            String broadcastMessage = "Status," + messages[1] + "," + status + "," + String.valueOf(a.getStartTime()) + "," + distanceCovered + "," + messages[2] + "," + messages[2];
             ArrayList<Integer> subscribers = a.getsubscribers();
             RaceTracker.sendMessage(broadcastMessage, subscribers);
             System.out.println("Broadcasting new atheletes to all clients");

@@ -1,6 +1,5 @@
 package tracker.Messages;
 
-import tracker.Communicator;
 import tracker.Client;
 import tracker.RaceTracker;
 
@@ -25,8 +24,6 @@ public class RaceStartedProcessor extends Message {
 
         ArrayList<Integer> allClients = Client.getAllClients();
         RaceTracker.sendMessage(raceStartedMessage, allClients);
-//        Communicator comm = new Communicator();
-//        comm.send(raceStartedMessage, address, port);
     }
 
     public static String getRaceStartedMessage() {

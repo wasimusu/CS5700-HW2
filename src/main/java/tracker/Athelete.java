@@ -8,7 +8,7 @@ public class Athelete {
 
     private int bibNumber;
     private double distanceCovered;
-    private double time;
+    private int lastUpdatedTime;
     private String status;
     private int age;
     private int startTime;
@@ -23,7 +23,7 @@ public class Athelete {
     public Athelete(String status, int bibNumber, int time, String firstName, String lastName, String sex, int age) {
         this.bibNumber = bibNumber;
         this.status = status;
-        this.time = time;
+        this.lastUpdatedTime = time;
         this.age = age;
         this.sex = sex;
         this.firstName = firstName;
@@ -35,14 +35,15 @@ public class Athelete {
     }
 
     public String toString() {
-        return ("Player : " + this.bibNumber + " " + this.time + " : " + status);
+        return ("Player : " + this.bibNumber + " " + this.lastUpdatedTime+ " : " + status);
     }
 
     // Update the athelete's information as you get data from race
     public void updateStatus(String status, int time, float distanceCovered) {
         this.distanceCovered = distanceCovered;
         this.status = status;
-        this.time = time;
+        this.lastUpdatedTime = time;
+        this.finishTime = time;
     }
 
     public String getFirstName() {
@@ -78,8 +79,8 @@ public class Athelete {
         System.out.println(bibNumber + " lost a client : ");
     }
 
-    public double getTime() {
-        return time;
+    public int getLastUpdatedTime() {
+        return lastUpdatedTime;
     }
 
     // Get distance convered by Athelete when it is observed/updated
