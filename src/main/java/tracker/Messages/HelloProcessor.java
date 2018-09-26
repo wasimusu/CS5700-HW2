@@ -26,8 +26,8 @@ public class HelloProcessor extends Message {
         // Send out a race stared message to client if you have not already
         if (!client.isAcknoweledged()) {
             Communicator trackComm = new Communicator();
+            System.out.println(trackComm.getLocalPort());
             trackComm.send("Race,Bension Loop,16090", InetAddress.getLocalHost(), port);
-            System.out.println("Sent Race started message back: ");
             trackComm.close();
         }
     }

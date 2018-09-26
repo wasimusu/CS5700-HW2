@@ -20,7 +20,7 @@ public class Message {
         } else if (parts[0].equals("Unsubscribe")) {
             return new UnsubscribeProcessor(message, address, port);
         } else if (parts[0].equals("OnCourse")) {
-            return new AtheleteStatusProcessor(message, address, port);
+            return new OnCourseProcessor(message, address, port);
         } else if (parts[0].equals("DidNotStart")) {
             return new AtheleteStatusProcessor(message, address, port);
         } else if (parts[0].equals("Started")) {

@@ -11,6 +11,8 @@ public class Athelete {
     private double time;
     private String status;
     private int age;
+    private int startTime;
+    private int finishTime;
     private String lastName;
     private String firstName;
     private String sex;
@@ -26,9 +28,10 @@ public class Athelete {
         this.sex = sex;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.startTime = time;
         System.out.println(this);
         subscribers = new ArrayList<Integer>(); // list of subscribers port address
-        bibNumberAthelete.put(bibNumber, this);
+        Athelete.bibNumberAthelete.put(bibNumber, this);
     }
 
     public String toString() {
@@ -40,6 +43,22 @@ public class Athelete {
         this.distanceCovered = distanceCovered;
         this.status = status;
         this.time = time;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public String getSex() {
+        return this.sex;
+    }
+
+    public String getStartTime() {
+        return String.valueOf(this.startTime);
     }
 
     // Get the lis of subscribers of an athelete to post notifications to clients
@@ -74,6 +93,6 @@ public class Athelete {
     }
 
     public static Athelete getAtheleteByBibNumber(int bibNumber) {
-        return bibNumberAthelete.get(bibNumber);
+        return Athelete.bibNumberAthelete.get(bibNumber);
     }
 }

@@ -1,7 +1,7 @@
 package tracker.Messages;
 
 import tracker.Athelete;
-
+import tracker.RaceTracker;
 import java.net.InetAddress;
 
 public class SubscribeProcessor extends Message {
@@ -22,11 +22,7 @@ public class SubscribeProcessor extends Message {
         Athelete mappedAthelete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
         mappedAthelete.subscribe(port); // Maybe you can just keep the list of port address
 
-//        this.nameAtheleteMap.get(bibNumber).subscribe(mappedClient);
-//        // Convey to the client that the race started
-//        if (!mappedClient.isAcknoweledged()) {
-//            this.serverComm.send(raceStartedMessage, InetAddress.getLocalHost(), port);
-//        }
-
+        // Inform client that the race started when they first register to the client
+        RaceTracker.sendMessage("Race,Bension Loop,16090", port);
     }
 }
