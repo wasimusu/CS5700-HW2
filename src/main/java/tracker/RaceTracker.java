@@ -17,14 +17,11 @@ public class RaceTracker {
         serverComm.setProcessor(messageProcessor);
         serverComm.start();
         serverComm.run();
-        System.out.println("Finished");
     }
 
     public static void sendMessage(String message, ArrayList<Integer> ports) throws Exception {
         for (Integer port : ports) {
-            RaceTracker.serverComm.send(message, InetAddress.getLocalHost(), port);
-            System.out.println("Message sent : " + message + "\t" + port);
-            System.out.println("........................................");
+            sendMessage(message, port);
         }
     }
 

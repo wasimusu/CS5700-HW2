@@ -4,12 +4,12 @@ import tracker.Athelete;
 
 import java.net.InetAddress;
 
-public class StartedProcessor extends Message {
+public class AthleteStartedProcessor extends Message {
     private String message;
     private InetAddress address;
     private int port;
 
-    public StartedProcessor(String message, InetAddress address, int port) {
+    public AthleteStartedProcessor(String message, InetAddress address, int port) {
         this.message = message;
         this.address = address;
         this.port = port;

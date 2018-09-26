@@ -2,6 +2,7 @@ package tracker.Messages;
 
 import tracker.Communicator;
 import tracker.Client;
+import tracker.RaceTracker;
 
 import java.net.InetAddress;
 
@@ -27,7 +28,12 @@ public class HelloProcessor extends Message {
         if (!client.isAcknoweledged()) {
             Communicator trackComm = new Communicator();
             System.out.println(trackComm.getLocalPort());
-            trackComm.send("Race,Bension Loop,16090", InetAddress.getLocalHost(), port);
+            String raceStartedMessage = "Race,Bension Loop,16090";
+            raceStartedMessage = RaceStartedProcessor.getRaceStartedMessage();
+            if (raceStartedMessage != null) {
+                trackComm.send(raceStartedMessage, InetAddress.getLocalHost(), port);
+                client.setAcknoweledged();
+            }
             trackComm.close();
         }
     }

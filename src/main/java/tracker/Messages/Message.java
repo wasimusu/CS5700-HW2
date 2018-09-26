@@ -12,7 +12,7 @@ public class Message {
         String[] parts = message.split(",", 0);
 
         if (parts[0].equals("Race")) {
-            return new RaceProcessor(message, address, port);
+            return new RaceStartedProcessor(message, address, port);
         } else if (message.equals("Hello")) {
             return new HelloProcessor(message, address, port);
         } else if (parts[0].equals("Subscribe")) {
@@ -24,7 +24,7 @@ public class Message {
         } else if (parts[0].equals("DidNotStart")) {
             return new AtheleteStatusProcessor(message, address, port);
         } else if (parts[0].equals("Started")) {
-            return new StartedProcessor(message, address, port);
+            return new AthleteStartedProcessor(message, address, port);
         } else if (parts[0].equals("Finished")) {
             return new AtheleteStatusProcessor(message, address, port);
         } else if (parts[0].equals("Registered")) {
