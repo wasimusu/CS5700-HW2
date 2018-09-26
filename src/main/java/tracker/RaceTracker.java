@@ -1,5 +1,6 @@
 package tracker;
 
+import org.jetbrains.annotations.NotNull;
 import tracker.Messages.MessageProcessor;
 
 import java.net.InetAddress;
@@ -19,7 +20,7 @@ public class RaceTracker {
         serverComm.run();
     }
 
-    public static void sendMessage(String message, ArrayList<Integer> ports) throws Exception {
+    public static void sendMessage(String message, @NotNull ArrayList<Integer> ports) throws Exception {
         for (Integer port : ports) {
             sendMessage(message, port);
         }

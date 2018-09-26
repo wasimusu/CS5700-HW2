@@ -76,13 +76,14 @@ public class Athelete {
     // Subscribe to an athelete's activity
     public void subscribe(int port) throws Exception {
         this.subscribers.add(port);
-        System.out.println(bibNumber + " gained a client : ");
+        System.out.println(bibNumber + " gained a client : " + port);
     }
 
     // Unsubscribe from an athelete's activity
     public void unsubscribe(int port) throws Exception {
-        this.subscribers.remove(port);
-        System.out.println(bibNumber + " lost a client : ");
+        int portIndex = this.subscribers.indexOf(port);
+        this.subscribers.remove(portIndex);
+        System.out.println(bibNumber + " lost a client : " + port);
     }
 
     public int getLastUpdatedTime() {
@@ -95,7 +96,7 @@ public class Athelete {
     }
 
     // Get bib number of the athelete
-    public double getBibNumber() {
+    public int getBibNumber() {
         return bibNumber;
     }
 

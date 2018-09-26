@@ -14,6 +14,7 @@ public class Message {
     }
 
     public static Message messageObject(String message, InetAddress address, int port) {
+        // We are never going to get a null or empty message here to process
         String[] parts = message.split(",", 0);
 
         if (parts[0].equals("Race")) {
@@ -36,8 +37,8 @@ public class Message {
             return new NewAtheleteProcessor(message, address, port);
         } else {
             System.out.println(message);
+            return new Message();
         }
-        return new Message();
     }
 
     public void execute() throws Exception {
