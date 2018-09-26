@@ -7,7 +7,7 @@ public class Athelete {
     public static HashMap<Integer, Athelete> bibNumberAthelete = new HashMap<Integer, Athelete>();
 
     private int bibNumber;
-    private double distanceCovered;
+    private float distanceCovered;
     private int lastUpdatedTime;
     private String status;
     private int age;
@@ -39,6 +39,9 @@ public class Athelete {
 
     // Update the athelete's information as you get data from race
     public void updateStatus(String status, int time, float distanceCovered) {
+        if (status.equals("Started")) {
+            this.startTime = time;
+        }
         this.distanceCovered = distanceCovered;
         this.status = status;
         this.lastUpdatedTime = time;
@@ -87,7 +90,7 @@ public class Athelete {
     }
 
     // Get distance convered by Athelete when it is observed/updated
-    public double getDistanceCovered() {
+    public float getDistanceCovered() {
         return distanceCovered;
     }
 

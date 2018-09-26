@@ -11,6 +11,10 @@ public class MessageProcessor implements IMessageProcessor {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public void process(String message, InetAddress address, int port) throws Exception {
         if (message == null) {
