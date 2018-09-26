@@ -8,14 +8,9 @@ import java.util.ArrayList;
 
 public class RaceStartedProcessor extends Message {
     private static String raceStartedMessage;
-    private String message;
-    private InetAddress address;
-    private int port;
 
     public RaceStartedProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address, port);
         raceStartedMessage = message;
     }
 
@@ -29,4 +24,5 @@ public class RaceStartedProcessor extends Message {
     public static String getRaceStartedMessage() {
         return raceStartedMessage;
     }
+
 }

@@ -18,7 +18,6 @@ public class Athelete {
     private String sex;
 
     private ArrayList<Integer> subscribers;
-    private static HashMap<String, Athelete> mapa;
 
     public Athelete(String status, int bibNumber, int time, String firstName, String lastName, String sex, int age) {
         this.bibNumber = bibNumber;
@@ -35,7 +34,7 @@ public class Athelete {
     }
 
     public String toString() {
-        return ("Player : " + this.bibNumber + " " + this.lastUpdatedTime+ " : " + status);
+        return ("Player : " + this.bibNumber + " " + this.lastUpdatedTime + " : " + status);
     }
 
     // Update the athelete's information as you get data from race
@@ -56,6 +55,10 @@ public class Athelete {
 
     public String getSex() {
         return this.sex;
+    }
+
+    public String getStatus() {
+        return this.status;
     }
 
     public String getStartTime() {

@@ -6,14 +6,9 @@ import tracker.RaceTracker;
 import java.net.InetAddress;
 
 public class SubscribeProcessor extends Message {
-    private String message;
-    private InetAddress address;
-    private int port;
 
     public SubscribeProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address, port);
     }
 
     public void execute() throws Exception {
@@ -25,6 +20,6 @@ public class SubscribeProcessor extends Message {
 
         // Inform client that the race started when they first register to the client
         RaceTracker.sendMessage(RaceStartedProcessor.getRaceStartedMessage(), port);
-
     }
+
 }

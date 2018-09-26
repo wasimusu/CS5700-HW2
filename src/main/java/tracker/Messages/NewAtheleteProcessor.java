@@ -8,20 +8,21 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 
 public class NewAtheleteProcessor extends Message {
-    private String message;
-    private InetAddress address;
-    private int port;
+//    private String message;
+//    private InetAddress address;
+//    private int port;
 
     public NewAtheleteProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address,port);
+//        this.message = message;
+//        this.address = address;
+//        this.port = port;
     }
 
     public void execute() throws Exception {
         System.out.println("Executing in New Athelete " + message + "\t" + address + port);
         // Making sense of the message received and registering the athelete
-        String[] messages = message.split(",");
+        String[] messages = this.message.split(",");
         String status = messages[0];
         String bibNumber = messages[1];
         int time = Integer.valueOf(messages[2]);

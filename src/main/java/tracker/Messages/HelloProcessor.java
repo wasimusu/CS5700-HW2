@@ -2,19 +2,16 @@ package tracker.Messages;
 
 import tracker.Communicator;
 import tracker.Client;
-import tracker.RaceTracker;
 
 import java.net.InetAddress;
 
 public class HelloProcessor extends Message {
-    private String message;
-    private InetAddress address;
-    private int port;
+//    private String message;
+//    private InetAddress address;
+//    private int port;
 
     public HelloProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address,port);
     }
 
     public void execute() throws Exception {
@@ -37,4 +34,5 @@ public class HelloProcessor extends Message {
             trackComm.close();
         }
     }
+
 }

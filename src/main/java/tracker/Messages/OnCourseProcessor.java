@@ -7,19 +7,13 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 
 public class OnCourseProcessor extends Message {
-    private String message;
-    private InetAddress address;
-    private int port;
-
     public OnCourseProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address,port);
     }
 
     public void execute() throws Exception {
         System.out.println("Executing in Athelete Status  " + message + "\t" + address + port);
-        String[] messages = message.split(",");
+        String[] messages = this.message.split(",");
         String status = messages[0];
         String bibNumber = messages[1];
         String timeElapsed = messages[2];
@@ -42,5 +36,4 @@ public class OnCourseProcessor extends Message {
             System.out.println("Null object encountered. Can't update status");
         }
     }
-
 }

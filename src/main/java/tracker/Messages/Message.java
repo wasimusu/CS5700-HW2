@@ -3,9 +3,14 @@ package tracker.Messages;
 import java.net.InetAddress;
 
 public class Message {
-    static String message;
+    protected String message;
+    protected int port;
+    protected InetAddress address;
 
-    public static void Message() {
+    public void Message(String message, InetAddress address, int port) {
+        this.address = address;
+        this.message = message;
+        this.port = port;
     }
 
     public static Message messageObject(String message, InetAddress address, int port) {
@@ -33,9 +38,22 @@ public class Message {
             System.out.println(message);
         }
         return new Message();
-
     }
 
     public void execute() throws Exception {
     }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public InetAddress getAddress() {
+        return address;
+    }
+
+
 }

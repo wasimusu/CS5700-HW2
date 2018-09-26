@@ -1,18 +1,11 @@
 package tracker.Messages;
-
 import tracker.Athelete;
-
 import java.net.InetAddress;
 
 public class UnsubscribeProcessor extends Message {
-    private String message;
-    private InetAddress address;
-    private int port;
 
     public UnsubscribeProcessor(String message, InetAddress address, int port) {
-        this.message = message;
-        this.address = address;
-        this.port = port;
+        super.Message(message, address, port);
     }
 
     public void execute() throws Exception {
@@ -22,4 +15,5 @@ public class UnsubscribeProcessor extends Message {
         Athelete mappedAthelete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
         mappedAthelete.unsubscribe(port); // Maybe you can just keep the list of port address
     }
+
 }
