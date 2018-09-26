@@ -1,9 +1,9 @@
 package tracker;
 
-import tracker.Messages.Message;
 import tracker.Messages.MessageProcessor;
 
 import java.net.InetAddress;
+import java.util.ArrayList;
 
 public class RaceTracker {
     private int port;
@@ -20,8 +20,10 @@ public class RaceTracker {
         System.out.println("Finished");
     }
 
-    public static void sendMessage(String message) throws Exception{
-
+    public static void sendMessage(String message, ArrayList<Integer> ports) throws Exception {
+//        for(Integer port: ports){
+//            this.serverComm.send(message, InetAddress.getLocalHost(), port);
+//        }
     }
 
     public static void main(String[] args) throws Exception {

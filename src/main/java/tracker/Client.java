@@ -11,11 +11,10 @@ import java.util.HashMap;
 // status changed for one of its atheletes
 // Observer
 public class Client {
-    public static HashMap<Integer, Client> portAddressClientMap = new HashMap<Integer, Client>();
+    public static ArrayList<Integer> allClients = new ArrayList<Integer>();
 
     private int portAddress;
-    private ArrayList<Athelete> myAtheletes;
-    private Communicator communicator;
+    //    private ArrayList<Athelete> myAtheletes;
     private boolean ACK;
 
     // Just become a client and you have 0 to many atheletes
@@ -23,10 +22,8 @@ public class Client {
 
         ACK = false; // did it received the first start of race message
         this.portAddress = portAddress;
-        portAddressClientMap.put(portAddress, this);
-//        communicator = new Communicator(portAddress);
-
-        myAtheletes = new ArrayList<Athelete>();
+        allClients.add(portAddress);
+//        myAtheletes = new ArrayList<Athelete>();
     }
 
     @Override
@@ -46,24 +43,19 @@ public class Client {
         return this.portAddress;
     }
 
-    // Identify the client using port address
-    public static Client identifyClient(int portAddress) {
-        return portAddressClientMap.get(portAddress);
+    // Get list of all the clients instances
+    public static ArrayList<Integer> getAllClients() {
+        return allClients;
     }
 
-    // Series of messages that are sent by client to the tracker
-    public void sendSubscribe(int bibNumber) throws Exception {
-        String message = "Subscribe," + String.valueOf(bibNumber);
-        sendMessageToTracker(message);
-    }
-
-    public void sendUnsubscribe(int bibNumber) throws Exception {
-        String message = "Subscribe," + String.valueOf(bibNumber);
-        sendMessageToTracker(message);
-    }
-
-    public void sendMessageToTracker(String message) throws Exception {
-        communicator.send(message, InetAddress.getLocalHost(), 12000);
-    }
-
+//    // Series of messages that are sent by client to the tracker
+//    public void sendSubscribe(int bibNumber) throws Exception {
+//        String message = "Subscribe," + String.valueOf(bibNumber);
+//        sendMessageToTracker(message);
+//    }
+//
+//    public void sendUnsubscribe(int bibNumber) throws Exception {
+//        String message = "Subscribe," + String.valueOf(bibNumber);
+//        sendMessageToTracker(message);
+//    }
 }

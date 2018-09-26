@@ -15,8 +15,7 @@ public class Athelete {
     private String firstName;
     private String sex;
 
-    private ArrayList<Integer> subscribersPortAddress;
-    private int totalSubscriber;
+    private ArrayList<Integer> subscribers;
     private static HashMap<String, Athelete> mapa;
 
     public Athelete(String status, int bibNumber, int time, String firstName, String lastName, String sex, int age) {
@@ -28,7 +27,7 @@ public class Athelete {
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println(this);
-        subscribersPortAddress = new ArrayList<Integer>();
+        subscribers = new ArrayList<Integer>(); // list of subscribers port address
         bibNumberAthelete.put(bibNumber, this);
     }
 
@@ -43,26 +42,22 @@ public class Athelete {
         this.time = time;
     }
 
+    // Get the lis of subscribers of an athelete to post notifications to clients
+    public ArrayList<Integer> getsubscribers() {
+        return this.subscribers;
+    }
+
     // Subscribe to an athelete's activity
-    public void subscribe(Client client) throws Exception {
-        this.subscribersPortAddress.add(client.getPortAddress());
-        totalSubscriber++;
-        System.out.println(bibNumber + " gained a client : " + totalSubscriber);
+    public void subscribe(int port) throws Exception {
+        this.subscribers.add(port);
+        System.out.println(bibNumber + " gained a client : ");
     }
 
     // Unsubscribe from an athelete's activity
-    public void unsubscribe(Client client) throws Exception {
-        this.subscribersPortAddress.remove(client.getPortAddress());
-        totalSubscriber--;
-        System.out.println(bibNumber + " lost a client: " + totalSubscriber);
+    public void unsubscribe(int port) throws Exception {
+        this.subscribers.remove(port);
+        System.out.println(bibNumber + " lost a client : ");
     }
-
-//    public void notifyChange() {
-//        // Notify the tracker maybe
-//        for (Client subscriber : subscribers) {
-//            // Somehow inform them that a change occured
-//        }
-//    }
 
     public double getTime() {
         return time;
@@ -76,11 +71,6 @@ public class Athelete {
     // Get bib number of the athelete
     public double getBibNumber() {
         return bibNumber;
-    }
-
-    // Get the total number of subscriber of an athelete
-    public int getTotalSubscriber() {
-        return totalSubscriber;
     }
 
     public static Athelete getAtheleteByBibNumber(int bibNumber) {

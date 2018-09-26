@@ -1,5 +1,4 @@
 package tracker.Messages;
-
 import tracker.Athelete;
 
 import java.net.InetAddress;
@@ -30,6 +29,6 @@ public class NewAtheleteProcessor extends Message {
         // Instanstiate an athelete object
         Athelete a = new Athelete(status, bibNumber, time, firstName, lastName, gender, age);
 
-        // Notify Clients
+        // Notify All the existing clients
     }
 }

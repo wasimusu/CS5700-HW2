@@ -1,7 +1,6 @@
 package tracker.Messages;
 
 import tracker.Athelete;
-import tracker.Client;
 
 import java.net.InetAddress;
 
@@ -20,9 +19,8 @@ public class SubscribeProcessor extends Message {
         System.out.println("Executing in Subscribe " + message + "\t" + address + port);
         String[] messages = message.split(",");
         String bibNumber = messages[1];
-        Client mappedClient = Client.identifyClient(port);
         Athelete mappedAthelete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
-        mappedAthelete.subscribe(mappedClient); // Maybe you can just keep the list of port address
+        mappedAthelete.subscribe(port); // Maybe you can just keep the list of port address
 
 //        this.nameAtheleteMap.get(bibNumber).subscribe(mappedClient);
 //        // Convey to the client that the race started
