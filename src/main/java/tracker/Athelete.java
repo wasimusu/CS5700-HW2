@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Athelete {
-    public static HashMap<Integer, Athelete> bibNumberAthelete = new HashMap<Integer, Athelete>();
+    private static HashMap<Integer, Athelete> bibNumberAthelete = new HashMap<Integer, Athelete>();
+    private static ArrayList<Integer> bibNumbers = new ArrayList<Integer>(); // list of registered athletes
 
     private int bibNumber;
     private float distanceCovered;
@@ -28,9 +29,9 @@ public class Athelete {
         this.firstName = firstName;
         this.lastName = lastName;
         this.startTime = time;
-        System.out.println(this);
         subscribers = new ArrayList<Integer>(); // list of subscribers port address
         Athelete.bibNumberAthelete.put(bibNumber, this);
+        Athelete.bibNumbers.add(bibNumber);
     }
 
     public String toString() {
@@ -59,6 +60,7 @@ public class Athelete {
     public String getSex() {
         return this.sex;
     }
+    public int getAge(){return this.age;}
 
     public String getStatus() {
         return this.status;
@@ -102,5 +104,9 @@ public class Athelete {
 
     public static Athelete getAtheleteByBibNumber(int bibNumber) {
         return Athelete.bibNumberAthelete.get(bibNumber);
+    }
+
+    public static ArrayList<Integer> getBibNumbers() {
+        return Athelete.bibNumbers;
     }
 }

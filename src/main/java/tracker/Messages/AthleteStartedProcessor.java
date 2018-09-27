@@ -19,7 +19,7 @@ public class AthleteStartedProcessor extends Message {
         String startTime = messages[2];
         float distanceCovered = 0;
 
-        Athelete a = Athelete.bibNumberAthelete.get(Integer.valueOf(bibNumber));
+        Athelete a = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
 
         if (a != null) {
             a.updateStatus(status, Integer.valueOf(startTime), distanceCovered);

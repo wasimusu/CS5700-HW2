@@ -27,12 +27,18 @@ public class Message {
             return new UnsubscribeProcessor(message, address, port);
         } else if (parts[0].equals("OnCourse")) {
             return new OnCourseProcessor(message, address, port);
+
         } else if (parts[0].equals("DidNotStart")) {
-            return new AtheleteStatusProcessor(message, address, port);
+            return new AthleteStartedProcessor(message, address, port);
+
         } else if (parts[0].equals("Started")) {
             return new AthleteStartedProcessor(message, address, port);
         } else if (parts[0].equals("Finished")) {
             return new AthleteFinishedProcessor(message, address, port);
+
+        } else if (parts[0].equals("DidNotFinish")) {
+            return new AthleteFinishedProcessor(message, address, port);
+
         } else if (parts[0].equals("Registered")) {
             return new NewAtheleteProcessor(message, address, port);
         } else {

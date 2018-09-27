@@ -1,6 +1,7 @@
 package tracker.Messages;
 
 import tracker.Athelete;
+import tracker.Client;
 import tracker.RaceTracker;
 
 import java.net.InetAddress;

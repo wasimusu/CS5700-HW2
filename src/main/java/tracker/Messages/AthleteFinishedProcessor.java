@@ -18,7 +18,7 @@ public class AthleteFinishedProcessor extends Message {
         String bibNumber = messages[1];
         String startTime = messages[2];
 
-        Athelete a = Athelete.bibNumberAthelete.get(Integer.valueOf(bibNumber));
+        Athelete a = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
 
         if (a != null) {
             a.updateStatus(status, Integer.valueOf(startTime), a.getDistanceCovered());

@@ -19,7 +19,7 @@ public class OnCourseProcessor extends Message {
         String timeElapsed = messages[2];
         float distanceCovered = Float.valueOf(messages[3]);
 
-        Athelete a = Athelete.bibNumberAthelete.get(Integer.valueOf(bibNumber));
+        Athelete a =Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
         if (a != null) {
             a.updateStatus(status, Integer.valueOf(timeElapsed), distanceCovered);
             System.out.println("Updated Athelete: " + a);
