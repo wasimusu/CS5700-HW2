@@ -13,7 +13,7 @@ public class NewAtheleteProcessor extends Message {
 //    private int port;
 
     public NewAtheleteProcessor(String message, InetAddress address, int port) {
-        super.Message(message, address,port);
+        super.Message(message, address, port);
 //        this.message = message;
 //        this.address = address;
 //        this.port = port;
@@ -38,7 +38,9 @@ public class NewAtheleteProcessor extends Message {
         ArrayList<Integer> allClients = Client.getAllClients();
         // Format : Athlete,<bib number>,<first name>,<last name>,<gender>,<age>
         String boardcastMessage = "Athlete," + bibNumber + "," + firstName + "," + lastName + "," + gender + "," + age;
-        RaceTracker.sendMessage(boardcastMessage, allClients);
-        System.out.println("Broadcasting new atheletes to all clients");
+        if (allClients != null) {
+            RaceTracker.sendMessage(boardcastMessage, allClients);
+            System.out.println("Broadcasting new atheletes to all clients");
+        }
     }
 }

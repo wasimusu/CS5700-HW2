@@ -1,5 +1,7 @@
 package tracker.Messages;
+
 import tracker.Athelete;
+
 import java.net.InetAddress;
 
 public class UnsubscribeProcessor extends Message {
@@ -12,8 +14,10 @@ public class UnsubscribeProcessor extends Message {
         System.out.println("Executing in Unsubscribe " + message + "\t" + address + port);
         String[] messages = message.split(",");
         String bibNumber = messages[1];
-        Athelete mappedAthelete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
-        mappedAthelete.unsubscribe(port); // Maybe you can just keep the list of port address
+        // You never get a null athlete. But in test you do
+        Athelete mappedAthlete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
+        if (mappedAthlete != null) {
+            mappedAthlete.unsubscribe(port); // Maybe you can just keep the list of port address}
+        }
     }
-
 }

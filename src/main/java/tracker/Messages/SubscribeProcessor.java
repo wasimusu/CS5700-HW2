@@ -16,10 +16,12 @@ public class SubscribeProcessor extends Message {
         String[] messages = message.split(",");
         String bibNumber = messages[1];
         Athelete mappedAthelete = Athelete.getAtheleteByBibNumber(Integer.valueOf(bibNumber));
-        mappedAthelete.subscribe(port); // Maybe you can just keep the list of port address
-
+        if (mappedAthelete != null) {
+            mappedAthelete.subscribe(port); // Maybe you can just keep the list of port address
+        }
         // Inform client that the race started when they first register to the client
-        RaceTracker.sendMessage(RaceStartedProcessor.getRaceStartedMessage(), port);
+        if (RaceStartedProcessor.getRaceStartedMessage() != null) {
+            RaceTracker.sendMessage(RaceStartedProcessor.getRaceStartedMessage(), port);
+        }
     }
-
 }

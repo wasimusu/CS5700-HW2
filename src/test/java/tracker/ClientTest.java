@@ -48,6 +48,8 @@ public class ClientTest {
         arrayList.add(port1);
         arrayList.add(port2);
         ArrayList<Integer> expectedArrayList = Client.getAllClients();
+        System.out.println(expectedArrayList);
+        System.out.println(arrayList);
         assert arrayList.equals(expectedArrayList);
     }
 

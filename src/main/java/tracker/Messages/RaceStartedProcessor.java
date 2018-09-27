@@ -18,7 +18,9 @@ public class RaceStartedProcessor extends Message {
         System.out.println("Got hello from a client : " + message);
 
         ArrayList<Integer> allClients = Client.getAllClients();
-        RaceTracker.sendMessage(raceStartedMessage, allClients);
+        if (allClients != null) {
+            RaceTracker.sendMessage(raceStartedMessage, allClients);
+        }
     }
 
     public static String getRaceStartedMessage() {

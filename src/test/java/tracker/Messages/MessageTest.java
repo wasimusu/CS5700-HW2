@@ -11,7 +11,6 @@ public class MessageTest {
     public void testValidConstuction() throws Exception {
         String sentMessage = "wasim";
         InetAddress sentAddress = InetAddress.getLocalHost();
-        int sentPort = 34;
     }
 
     @Test
